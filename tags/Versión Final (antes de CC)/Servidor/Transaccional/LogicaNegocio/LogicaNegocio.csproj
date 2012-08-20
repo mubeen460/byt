@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{909389CB-11DE-41FB-B24F-D9AE6B10B82C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Trascend.Bolet.LogicaNegocio</RootNamespace>
+    <AssemblyName>Trascend.Bolet.LogicaNegocio</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NLog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\NLog\.NET Framework 4.0\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controladores\ControladorAnexo.cs" />
+    <Compile Include="Controladores\ControladorBusqueda.cs" />
+    <Compile Include="Controladores\ControladorCorresponsal.cs" />
+    <Compile Include="Controladores\ControladorEstado.cs" />
+    <Compile Include="Controladores\ControladorEstadoMarca.cs" />
+    <Compile Include="Controladores\ControladorObjeto.cs" />
+    <Compile Include="Controladores\ControladorTipoBase.cs" />
+    <Compile Include="Controladores\ControladorUsuario.cs" />
+    <Compile Include="Controladores\ControladorDepartamento.cs" />
+    <Compile Include="Controladores\ControladorRol.cs" />
+    <Compile Include="Controladores\ControladorBase.cs" />
+    <Compile Include="Controladores\ControladorAgente.cs" />
+    <Compile Include="Controladores\ControladorNacional.cs" />
+    <Compile Include="Controladores\ControladorPais.cs" />
+    <Compile Include="Controladores\ControladorInternacional.cs" />
+    <Compile Include="Controladores\ControladorTipoInfobol.cs" />
+    <Compile Include="Controladores\ControladorBoletin.cs" />
+    <Compile Include="Controladores\ControladorTipoFecha.cs" />
+    <Compile Include="Controladores\ControladorResolucion.cs" />
+    <Compile Include="Controladores\ControladorEstatus.cs" />
+    <Compile Include="Controladores\ControladorPoder.cs" />
+    <Compile Include="Controladores\ControladorAuditoria.cs" />
+    <Compile Include="Controladores\ControladorInteresado.cs" />
+    <Compile Include="Controladores\ControladorEtiqueta.cs" />
+    <Compile Include="Controladores\ControladorDetallePago.cs" />
+    <Compile Include="Controladores\ControladorTipoCliente.cs" />
+    <Compile Include="Controladores\ControladorTarifa.cs" />
+    <Compile Include="Controladores\ControladorMoneda.cs" />
+    <Compile Include="Controladores\ControladorIdioma.cs" />
+    <Compile Include="Controladores\ControladorAsociado.cs" />
+    <Compile Include="Controladores\ControladorConcepto.cs" />
+    <Compile Include="Controladores\ControladorJustificacion.cs" />
+    <Compile Include="Controladores\ControladorContacto.cs" />
+    <Compile Include="Controladores\ControladorCarta.cs" />
+    <Compile Include="Controladores\ControladorDatosTransferencia.cs" />
+    <Compile Include="Controladores\ControladorResumen.cs" />
+    <Compile Include="Controladores\ControladorRemitente.cs" />
+    <Compile Include="Controladores\ControladorMedio.cs" />
+    <Compile Include="Controladores\ControladorCategoria.cs" />
+    <Compile Include="Controladores\ControladorEntradaAlterna.cs" />
+    <Compile Include="Controladores\ControladorCartaOut.cs" />
+    <Compile Include="Controladores\ControladorAsignacion.cs" />
+    <Compile Include="Controladores\ControladorListaDatosValores.cs" />
+    <Compile Include="Controladores\ControladorListaDatosDominio.cs" />
+    <Compile Include="Controladores\ControladorMarca.cs" />
+    <Compile Include="Controladores\ControladorServicio.cs" />
+    <Compile Include="Controladores\ControladorTipoEstado.cs" />
+    <Compile Include="Controladores\ControladorCondicion.cs" />
+    <Compile Include="Controladores\ControladorAnaqua.cs" />
+    <Compile Include="Controladores\ControladorInfoAdicional.cs" />
+    <Compile Include="Controladores\ControladorInfoBol.cs" />
+    <Compile Include="Controladores\ControladorOperacion.cs" />
+    <Compile Include="Controladores\ControladorStatusWeb.cs" />
+    <Compile Include="Controladores\ControladorCesion.cs" />
+    <Compile Include="Controladores\ControladorFusion.cs" />
+    <Compile Include="Controladores\ControladorCambioDeDomicilio.cs" />
+    <Compile Include="Controladores\ControladorCambioPeticionario.cs" />
+    <Compile Include="Controladores\ControladorCambioDeNombre.cs" />
+    <Compile Include="Controladores\ControladorLicencia.cs" />
+    <Compile Include="Controladores\ControladorMarcaTercero.cs" />
+    <Compile Include="Controladores\ControladorPlanilla.cs" />
+    <Compile Include="Controladores\ControladorRenovacion.cs" />
+    <Compile Include="Controladores\ControladorMarcaBaseTercero.cs" />
+    <Compile Include="Controladores\ControladorPatente.cs" />
+    <Compile Include="Controladores\ControladorCambioDeDomicilioPatente.cs" />
+    <Compile Include="Controladores\ControladorCambioDeNombrePatente.cs" />
+    <Compile Include="Controladores\ControladorCambioPeticionarioPatente.cs" />
+    <Compile Include="Controladores\ControladorCesionPatente.cs" />
+    <Compile Include="Controladores\ControladorFusionPatente.cs" />
+    <Compile Include="Controladores\ControladorLicenciaPatente.cs" />
+    <Compile Include="Controladores\ControladorInventor.cs" />
+    <Compile Include="Controladores\ControladorAnualidad.cs" />
+    <Compile Include="Controladores\ControladorInfoBolPatente.cs" />
+    <Compile Include="Controladores\ControladorMemoria.cs" />
+    <Compile Include="Controladores\ControladorFecha.cs" />
+    <Compile Include="Controladores\ControladorInfoBolMarcaTer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Comun\ObjetosComunes\ObjetosComunes.csproj">
+      <Project>{15437671-F551-4B4B-9E06-283A1D241CE0}</Project>
+      <Name>ObjetosComunes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Comandos\Comandos.csproj">
+      <Project>{21B2F87F-3BB7-4EB9-9AB5-60104DC9C073}</Project>
+      <Name>Comandos</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

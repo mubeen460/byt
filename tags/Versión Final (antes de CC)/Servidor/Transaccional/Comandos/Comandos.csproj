@@ -1,0 +1,487 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{21B2F87F-3BB7-4EB9-9AB5-60104DC9C073}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Trascend.Bolet.Comandos</RootNamespace>
+    <AssemblyName>Trascend.Bolet.Comandos</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NLog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\NLog\.NET Framework 4.0\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Comandos\ComandoBase.cs" />
+    <Compile Include="Comandos\ComandosAgente\ComandoConsultarAgentesYPoderes.cs" />
+    <Compile Include="Comandos\ComandosAgente\ComandoConsultarAgentesFiltro.cs" />
+    <Compile Include="Comandos\ComandosAgente\ComandoVerificarExistenciaAgente.cs" />
+    <Compile Include="Comandos\ComandosAgente\ComandoConsultarAgentesDeUnPoder.cs" />
+    <Compile Include="Comandos\ComandosAgente\ComandoConsultarAgentesSinPoderesFiltro.cs" />
+    <Compile Include="Comandos\ComandosAnaqua\ComandoConsultarAnaquaPorID.cs" />
+    <Compile Include="Comandos\ComandosAnexo\ComandoConsultarTodosAnexos.cs" />
+    <Compile Include="Comandos\ComandosAnexo\ComandoEliminarAnexo.cs" />
+    <Compile Include="Comandos\ComandosAnexo\ComandoInsertarOModificarAnexo.cs" />
+    <Compile Include="Comandos\ComandosAnexo\ComandoVerificarExistenciaAnexo.cs" />
+    <Compile Include="Comandos\ComandosAnualidad\ComandoConsultarAnualidadesFiltro.cs" />
+    <Compile Include="Comandos\ComandosAnualidad\ComandoConsultarUltimoIdAnualidad.cs" />
+    <Compile Include="Comandos\ComandosAnualidad\ComandoConsultarAnualidadesPorPatente.cs" />
+    <Compile Include="Comandos\ComandosAsignacion\ComandoConsultarAsignacionesPorCarta.cs" />
+    <Compile Include="Comandos\ComandosAsignacion\ComandoConsultarAsignacionesPorUsuario.cs" />
+    <Compile Include="Comandos\ComandosAsignacion\ComandoEliminarAsignacionesPorCarta.cs" />
+    <Compile Include="Comandos\ComandosAsociado\ComandoConsultarAsociadoConTodo.cs" />
+    <Compile Include="Comandos\ComandosAsociado\ComandoConsultarAsociadosFiltro.cs" />
+    <Compile Include="Comandos\ComandosAsociado\ComandoVerificarCartasDeAsociado.cs" />
+    <Compile Include="Comandos\ComandosAuditoria\ComandoAuditoriaPorFkyTabla.cs" />
+    <Compile Include="Comandos\ComandosBoletin\ComandoConsultarResolucionesDeBoletin.cs" />
+    <Compile Include="Comandos\ComandosBusqueda\ComandoConsultarBusquedaPorID.cs" />
+    <Compile Include="Comandos\ComandosBusqueda\ComandoConsultarBusquedasPorMarca.cs" />
+    <Compile Include="Comandos\ComandosBusqueda\ComandoConsultarTodasBusquedas.cs" />
+    <Compile Include="Comandos\ComandosBusqueda\ComandoEliminarBusqueda.cs" />
+    <Compile Include="Comandos\ComandosBusqueda\ComandoInsertarOModificarBusqueda.cs" />
+    <Compile Include="Comandos\ComandosBusqueda\ComandoVerificarExistenciaBusqueda.cs" />
+    <Compile Include="Comandos\ComandosCambioDeDomicilio\ComandoConsultarCambiosDeDomicilioFiltro.cs" />
+    <Compile Include="Comandos\ComandosCambioDeDomicilio\ComandoConsultarTodosCambioDeDomicilio.cs" />
+    <Compile Include="Comandos\ComandosCambioDeDomicilio\ComandoEliminarCambioDeDomicilio.cs" />
+    <Compile Include="Comandos\ComandosCambioDeDomicilio\ComandoInsertarOModificarCambioDeDomicilio.cs" />
+    <Compile Include="Comandos\ComandosCambioDeDomicilio\ComandoVerificarExistenciaCambioDeDomicilio.cs" />
+    <Compile Include="Comandos\ComandosCambioDeNombre\ComandoConsultarCambiosDeNombreFiltro.cs" />
+    <Compile Include="Comandos\ComandosCambioPeticionario\ComandoConsultarCambiosPeticionarioFiltro.cs" />
+    <Compile Include="Comandos\ComandosCambioPeticionario\ComandoConsultarTodosCambioPeticionario.cs" />
+    <Compile Include="Comandos\ComandosCambioPeticionario\ComandoEliminarCambioPeticionario.cs" />
+    <Compile Include="Comandos\ComandosCambioPeticionario\ComandoInsertarOModificarCambioPeticionario.cs" />
+    <Compile Include="Comandos\ComandosCambioPeticionario\ComandoVerificarExistenciaCambioPeticionario.cs" />
+    <Compile Include="Comandos\ComandosCartaOut\ComandoConsultarCartasOutsFiltro.cs" />
+    <Compile Include="Comandos\ComandosCartaOut\ComandoConsultarTodosCartaOuts.cs" />
+    <Compile Include="Comandos\ComandosCartaOut\ComandoInsertarOModificarCartaOut.cs" />
+    <Compile Include="Comandos\ComandosCartaOut\ComandoTransferirPlantilla.cs" />
+    <Compile Include="Comandos\ComandosCarta\ComandoConsultarCartasFiltro.cs" />
+    <Compile Include="Comandos\ComandosCarta\ComandoConsultarTodasCarta.cs" />
+    <Compile Include="Comandos\ComandosCarta\ComandoEliminarCarta.cs" />
+    <Compile Include="Comandos\ComandosCarta\ComandoInsertarOModificarCarta.cs" />
+    <Compile Include="Comandos\ComandosCesion\ComandoConsultarCesionesFiltro.cs" />
+    <Compile Include="Comandos\ComandosCesion\ComandoConsultarTodosCesion.cs" />
+    <Compile Include="Comandos\ComandosCesion\ComandoEliminarCesion.cs" />
+    <Compile Include="Comandos\ComandosCesion\ComandoInsertarOModificarCesion.cs" />
+    <Compile Include="Comandos\ComandosCesion\ComandoVerificarExistenciaCesion.cs" />
+    <Compile Include="Comandos\ComandosCorresponsal\ComandoConsultarTodosCorresponsables.cs" />
+    <Compile Include="Comandos\ComandosCorresponsal\ComandoEliminarCorresponsal.cs" />
+    <Compile Include="Comandos\ComandosCorresponsal\ComandoInsertarOModificarCorresponsal.cs" />
+    <Compile Include="Comandos\ComandosCorresponsal\ComandoVerificarExistenciaCorresponsal.cs" />
+    <Compile Include="Comandos\ComandosEstadoMarca\ComandoConsultarTodosEstadoMarca.cs" />
+    <Compile Include="Comandos\ComandosEstadoMarca\ComandoEliminarEstadoMarca.cs" />
+    <Compile Include="Comandos\ComandosEstadoMarca\ComandoInsertarOModificarEstadoMarca.cs" />
+    <Compile Include="Comandos\ComandosEstadoMarca\ComandoVerificarExistenciaEstadoMarca.cs" />
+    <Compile Include="Comandos\ComandosFusion\ComandoConsultarFusionesFiltro.cs" />
+    <Compile Include="Comandos\ComandosInfoBol\ComandoConsultarInfoBolesPorMarca.cs" />
+    <Compile Include="Comandos\ComandosInfoBol\ComandoConsultarInteresadosDeUnPoder.cs" />
+    <Compile Include="Comandos\ComandosInteresado\ComandoConsultarInteresadoConTodo.cs" />
+    <Compile Include="Comandos\ComandosInteresado\ComandoConsultarInteresadosFiltro.cs" />
+    <Compile Include="Comandos\ComandosInteresado\ComandoConsultarTodosInteresados.cs" />
+    <Compile Include="Comandos\ComandosInteresado\ComandoEliminarInteresado.cs" />
+    <Compile Include="Comandos\ComandosInteresado\ComandoInsertarOModificarInteresado.cs" />
+    <Compile Include="Comandos\ComandosInternacional\ComandoConsultarPorId.cs" />
+    <Compile Include="Comandos\ComandosInventor\ComandoConsultarInventoresPorPatente.cs" />
+    <Compile Include="Comandos\ComandosLicencia\ComandoConsultarLicenciasFiltro.cs" />
+    <Compile Include="Comandos\ComandosMarcaBaseTercero\ComandoConsultarMarcasBaseTerceroFiltro.cs" />
+    <Compile Include="Comandos\ComandosMarcaBaseTercero\ComandoConsultarTodosMarcaBaseTerceros.cs" />
+    <Compile Include="Comandos\ComandosMarcaBaseTercero\ComandoEliminarMarcaBaseTercero.cs" />
+    <Compile Include="Comandos\ComandosMarcaBaseTercero\ComandoInsertarOModificarMarcaBaseTercero.cs" />
+    <Compile Include="Comandos\ComandosMarcaBaseTercero\ComandoVerificarExistenciaMarcaBaseTercero.cs" />
+    <Compile Include="Comandos\ComandosMarcaBaseTercero\ComandoConsultarTodosMarcaBaseTercerosPorId.cs" />
+    <Compile Include="Comandos\ComandosMarcaTercero\ComandoConsultarMarcasTerceroFiltro.cs" />
+    <Compile Include="Comandos\ComandosMarcaTercero\ComandoConsultarMaxId.cs" />
+    <Compile Include="Comandos\ComandosMarcaTercero\ComandoConsultarMaxAnexo.cs" />
+    <Compile Include="Comandos\ComandosMarcaBaseTercero\ComandoConsultarMaxSecuencia.cs" />
+    <Compile Include="Comandos\ComandosMarcaTercero\ComandoConsultarClaseInternacional.cs" />
+    <Compile Include="Comandos\ComandosMarca\ComandoConsultarMarcaConTodo.cs" />
+    <Compile Include="Comandos\ComandosMarca\ComandoConsultarMarcasFiltro.cs" />
+    <Compile Include="Comandos\ComandosMarca\ComandoConsultarMarcaPorId.cs" />
+    <Compile Include="Comandos\ComandosMarca\ComandoConsultarMarcasPorFechaRenovacion.cs" />
+    <Compile Include="Comandos\ComandosMarca\ComandoConsultarRecordatoriosVista.cs" />
+    <Compile Include="Comandos\ComandosMarca\ComandoConsultarRecordatoriosVistaAutomatico.cs" />
+    <Compile Include="Comandos\ComandosMemoria\ComandoVerificarExistenciaMemoria.cs" />
+    <Compile Include="Comandos\ComandosOperacion\ComandoConsultarOperacionesFiltro.cs" />
+    <Compile Include="Comandos\ComandosOperacion\ComandoConsultarOperacionesPorPatente.cs" />
+    <Compile Include="Comandos\ComandosPatente\ComandoConsultarFechasPatente.cs" />
+    <Compile Include="Comandos\ComandosPlanilla\ComandoEjecutarProcedimiento.cs" />
+    <Compile Include="Comandos\ComandosOperacion\ComandoConsultarOperacionesPorMarcaYServicio.cs" />
+    <Compile Include="Comandos\ComandosPlanilla\ComandoConsultarPlanillaPorUsuario.cs" />
+    <Compile Include="Comandos\ComandosPlanilla\ComandoEliminarPlanilla.cs" />
+    <Compile Include="Comandos\ComandosPoder\ComandoConsultarPoderesFiltro.cs" />
+    <Compile Include="Comandos\ComandosPoder\ComandoConsultarPoderesPorAgente.cs" />
+    <Compile Include="Comandos\ComandosPoder\ComandoConsultarPoderesEntreAgentesEInteresado.cs" />
+    <Compile Include="Comandos\ComandosRenovacion\ComandoConsultarRenovacionesFiltro.cs" />
+    <Compile Include="Comandos\ComandosRenovacion\ComandoVerificarExistenciaRenovacion.cs" />
+    <Compile Include="Comandos\ComandosRenovacion\ComandoConsultarUltimaRenovacion.cs" />
+    <Compile Include="Comandos\ComandosResumen\ComandoVerificarExistenciaResumen.cs" />
+    <Compile Include="Comandos\ComandosCarta\ComandoVerificarExistenciaCarta.cs" />
+    <Compile Include="Comandos\ComandosConcepto\ComandoConsultarTodosConceptos.cs" />
+    <Compile Include="Comandos\ComandosContacto\ComandoConsultarTodosContactos.cs" />
+    <Compile Include="Comandos\ComandosContacto\ComandoConsultarContactosPorAsociado.cs" />
+    <Compile Include="Comandos\ComandosContacto\ComandoEliminarContacto.cs" />
+    <Compile Include="Comandos\ComandosContacto\ComandoInsertarOModificarContacto.cs" />
+    <Compile Include="Comandos\ComandosContador\ComandoConsultarPorIdContador.cs" />
+    <Compile Include="Comandos\ComandosDatosTransferencia\ComandoConsultarDatosTransferenciaPorAsociado.cs" />
+    <Compile Include="Comandos\ComandosDetallePago\ComandoConsultarTodosDetallePagos.cs" />
+    <Compile Include="Comandos\ComandosEstado\ComandoConsultarTodosEstados.cs" />
+    <Compile Include="Comandos\ComandosAgente\ComandoEliminarAgente.cs" />
+    <Compile Include="Comandos\ComandosAgente\ComandoInsertarOModificarAgente.cs" />
+    <Compile Include="Comandos\ComandosAuditoria\ComandoInsertarOModificarAuditoria .cs" />
+    <Compile Include="Comandos\ComandosAgente\ComandoConsultarTodosAgentes.cs" />
+    <Compile Include="Comandos\ComandosDepartamento\ComandoConsultarTodosDepartamentos.cs" />
+    <Compile Include="Comandos\ComandosDepartamento\ComandoConsultarDepartamentoPorId.cs" />
+    <Compile Include="Comandos\ComandosEstado\ComandoEliminarEstado.cs" />
+    <Compile Include="Comandos\ComandosEstado\ComandoInsertarOModificarEstado.cs" />
+    <Compile Include="Comandos\ComandosEstado\ComandoVerificarExistenciaEstado.cs" />
+    <Compile Include="Comandos\ComandosEstatuses\ComandoVerificarExistenciaEstatus.cs" />
+    <Compile Include="Comandos\ComandosEtiqueta\ComandoConsultarTodosEtiquetas.cs" />
+    <Compile Include="Comandos\ComandosIdioma\ComandoConsultarTodosIdiomas.cs" />
+    <Compile Include="Comandos\ComandosInternacional\ComandoVerificarExistenciaInternacional.cs" />
+    <Compile Include="Comandos\ComandosJustificacion\ComandoInsertarOModificarJustificacion.cs" />
+    <Compile Include="Comandos\ComandosMoneda\ComandoConsultarTodosMonedas.cs" />
+    <Compile Include="Comandos\ComandosNacional\ComandoConsultarTodosNacionales.cs" />
+    <Compile Include="Comandos\ComandosNacional\ComandoEliminarNacional.cs" />
+    <Compile Include="Comandos\ComandosNacional\ComandoInsertarOModificarNacional.cs" />
+    <Compile Include="Comandos\ComandosNacional\ComandoVerificarExistenciaNacional.cs" />
+    <Compile Include="Comandos\ComandosObjeto\ComandoEliminarObjeto.cs" />
+    <Compile Include="Comandos\ComandosObjeto\ComandoInsertarOModificarObjeto .cs" />
+    <Compile Include="Comandos\ComandosObjeto\ComandoConsultarTodosObjetos.cs" />
+    <Compile Include="Comandos\ComandosObjeto\ComandoVerificarExistenciaObjeto.cs" />
+    <Compile Include="Comandos\ComandosPais\ComandoVerificarExistenciaPais.cs" />
+    <Compile Include="Comandos\ComandosPoder\ComandoConsultarPoderesPorInteresado.cs" />
+    <Compile Include="Comandos\ComandosResolucion\ComandoVerificarExistenciaResolucion.cs" />
+    <Compile Include="Comandos\ComandosRol\ComandoConsultarTodosRoles.cs" />
+    <Compile Include="Comandos\ComandosRol\ComandoConsultarRolPorId.cs" />
+    <Compile Include="Comandos\ComandosRol\ComandoElimarRol.cs" />
+    <Compile Include="Comandos\ComandosRol\ComandoInsertarOModificarRol.cs" />
+    <Compile Include="Comandos\ComandosRol\ComandoConsultarRolesYObjetos.cs" />
+    <Compile Include="Comandos\ComandosRol\ComandoVerificarExistenciaRol.cs" />
+    <Compile Include="Comandos\ComandosTarifa\ComandoConsultarTodosTarifas.cs" />
+    <Compile Include="Comandos\ComandosTipoBase\ComandoConsultarTodosTiposBase.cs" />
+    <Compile Include="Comandos\ComandosTipoBase\ComandoEliminarTipoBase.cs" />
+    <Compile Include="Comandos\ComandosTipoBase\ComandoInsertarOModificarTipoBase.cs" />
+    <Compile Include="Comandos\ComandosTipoBase\ComandoVerificarExistenciaTipoBase.cs" />
+    <Compile Include="Comandos\ComandosTipoCliente\ComandoConsultarTodosTipoClientes.cs" />
+    <Compile Include="Comandos\ComandosTipoFecha\ComandoVerificarExistenciaTipoFecha.cs" />
+    <Compile Include="Comandos\ComandosTipoInfobol\ComandoVerificarExistenciaTipoInfoBol.cs" />
+    <Compile Include="Comandos\ComandosUsuario\ComandoAutentificarUsuario.cs" />
+    <Compile Include="Comandos\ComandosUsuario\ComandoEliminarUsuario.cs" />
+    <Compile Include="Comandos\ComandosPais\ComandoConsultarTodosPaises.cs" />
+    <Compile Include="Comandos\ComandosPais\ComandoEliminarPais.cs" />
+    <Compile Include="Comandos\ComandosPais\ComandoInsertarOModificarPais.cs" />
+    <Compile Include="Comandos\ComandosInternacional\ComandoConsultarTodosInternacionales.cs" />
+    <Compile Include="Comandos\ComandosInternacional\ComandoEliminarInternacional.cs" />
+    <Compile Include="Comandos\ComandosInternacional\ComandoInsertarOModificarInternacional.cs" />
+    <Compile Include="Comandos\ComandosTipoInfobol\ComandoConsultarTodosTipoInfobol.cs" />
+    <Compile Include="Comandos\ComandosTipoInfobol\ComandoEliminarTipoInfobol.cs" />
+    <Compile Include="Comandos\ComandosTipoInfobol\ComandoInsertarOModificarTipoInfobol.cs" />
+    <Compile Include="Comandos\ComandosResumen\ComandoConsultarTodosResumenes.cs" />
+    <Compile Include="Comandos\ComandosResumen\ComandoEliminarResumen.cs" />
+    <Compile Include="Comandos\ComandosResumen\ComandoInsertarOModificarResumen.cs" />
+    <Compile Include="Comandos\ComandosResolucion\ComandoConsultarTodosResoluciones.cs" />
+    <Compile Include="Comandos\ComandosResolucion\ComandoEliminarResolucion.cs" />
+    <Compile Include="Comandos\ComandosResolucion\ComandoInsertarOModificarResolucion.cs" />
+    <Compile Include="Comandos\ComandosTipoFecha\ComandoConsultarTodosTipoFechas.cs" />
+    <Compile Include="Comandos\ComandosTipoFecha\ComandoEliminarTipoFecha.cs" />
+    <Compile Include="Comandos\ComandosTipoFecha\ComandoInsertarOModificarTipoFecha.cs" />
+    <Compile Include="Comandos\ComandosEstatuses\ComandoConsultarTodosEstatus.cs" />
+    <Compile Include="Comandos\ComandosEstatuses\ComandoEliminarEstatus.cs" />
+    <Compile Include="Comandos\ComandosEstatuses\ComandoInsertarOModificarEstatus.cs" />
+    <Compile Include="Comandos\ComandosPoder\ComandoConsultarTodosPoderes.cs" />
+    <Compile Include="Comandos\ComandosPoder\ComandoEliminarPoder.cs" />
+    <Compile Include="Comandos\ComandosPoder\ComandoInsertarOModificarPoder.cs" />
+    <Compile Include="Comandos\ComandosContador\ComandoInsertarOModificarContador.cs" />
+    <Compile Include="Comandos\ComandosContadorAuditoria\ComandoConsultarPorIdContadorAuditoria.cs" />
+    <Compile Include="Comandos\ComandosContadorAuditoria\ComandoInsertarOModificarContadorAuditoria.cs" />
+    <Compile Include="Comandos\ComandosAsociado\ComandoConsultarTodosAsocaidos.cs" />
+    <Compile Include="Comandos\ComandosAsociado\ComandoEliminarAsociado.cs" />
+    <Compile Include="Comandos\ComandosAsociado\ComandoInsertarOModificarAsociado.cs" />
+    <Compile Include="Comandos\ComandosContadorFac\ComandoConsultarPorIdComandosContadorFac.cs" />
+    <Compile Include="Comandos\ComandosContadorFac\ComandoInsertarOModificarComandosContadorFac.cs" />
+    <Compile Include="Comandos\ComandosDatosTransferencia\ComandoConsultarTodosDatosTransferencia.cs" />
+    <Compile Include="Comandos\ComandosDatosTransferencia\ComandoEliminarDatosTransferencia.cs" />
+    <Compile Include="Comandos\ComandosDatosTransferencia\ComandoInsertarOModificarDatosTransferencia.cs" />
+    <Compile Include="Comandos\ComandosUsuario\ComandoVerificarExistenciaUsuario.cs" />
+    <Compile Include="Comandos\ComandosBoletin\ComandoConsultarTodosBoletines.cs" />
+    <Compile Include="Comandos\ComandosBoletin\ComandoEliminarBoletin.cs" />
+    <Compile Include="Comandos\ComandosBoletin\ComandoInsertarOModificarBoletin.cs" />
+    <Compile Include="Comandos\ComandosBoletin\ComandoVerificarExistenciaBoletin.cs" />
+    <Compile Include="Comandos\ComandosRemitente\ComandoConsultarTodosRemitentes.cs" />
+    <Compile Include="Comandos\ComandosRemitente\ComandoEliminarRemitent.cs" />
+    <Compile Include="Comandos\ComandosRemitente\ComandoInsertarOModificarRemitente.cs" />
+    <Compile Include="Comandos\ComandosMedio\ComandoConsultarTodosMedios.cs" />
+    <Compile Include="Comandos\ComandosMedio\ComandoEliminarMedio.cs" />
+    <Compile Include="Comandos\ComandosMedio\ComandoInsertarOModificarMedio.cs" />
+    <Compile Include="Comandos\ComandosMedio\ComandoVerificarExistenciaMedio.cs" />
+    <Compile Include="Comandos\ComandosCategoria\ComandoConsultarTodosCategorias.cs" />
+    <Compile Include="Comandos\ComandosCategoria\ComandoEliminarCategoria.cs" />
+    <Compile Include="Comandos\ComandosCategoria\ComandoInsertarOModificarCategoria.cs" />
+    <Compile Include="Comandos\ComandosCategoria\ComandoVerificarExistenciaCategoria.cs" />
+    <Compile Include="Comandos\ComandosEntradaAlterna\ComandoConsultarTodosBoletines.cs" />
+    <Compile Include="Comandos\ComandosEntradaAlterna\ComandoEliminarBoletin.cs" />
+    <Compile Include="Comandos\ComandosEntradaAlterna\ComandoInsertarOModificarBoletin.cs" />
+    <Compile Include="Comandos\ComandosEntradaAlterna\ComandoVerificarExistenciaBoletin.cs" />
+    <Compile Include="Comandos\ComandosContadorAsignacion\ComandoConsultarPorIdContadorAsignacion.cs" />
+    <Compile Include="Comandos\ComandosContadorAsignacion\ComandoInsertarOModificarContadorAsignacion.cs" />
+    <Compile Include="Comandos\ComandosAsignacion\ComandoInsertarOModificarAsignacion.cs" />
+    <Compile Include="Comandos\ComandosUsuario\ComandoConsultarUsuarioPorIniciales.cs" />
+    <Compile Include="Comandos\ComandosListaDatosValores\ComandoConsultarListaDatosValoresPorParametro.cs" />
+    <Compile Include="Comandos\ComandosListaDatosDominio\ComandoConsultarListaDatosDominioPorParametro.cs" />
+    <Compile Include="Comandos\ComandosMarca\ComandoConsultarTodasMarcas.cs" />
+    <Compile Include="Comandos\ComandosMarca\ComandoEliminarMarca.cs" />
+    <Compile Include="Comandos\ComandosMarca\ComandoInsertarOModificarMarca.cs" />
+    <Compile Include="Comandos\ComandosMarca\ComandoVerificarExistenciaMarca.cs" />
+    <Compile Include="Comandos\ComandosServicio\ComandoConsultarTodosServicios.cs" />
+    <Compile Include="Comandos\ComandosServicio\ComandoEliminarServicio.cs" />
+    <Compile Include="Comandos\ComandosServicio\ComandoInsertarOModificarServicio.cs" />
+    <Compile Include="Comandos\ComandosServicio\ComandoVerificarExistenciaServicio.cs" />
+    <Compile Include="Comandos\ComandosTipoEstado\ComandoConsultarTodosTipoEstado.cs" />
+    <Compile Include="Comandos\ComandosTipoEstado\ComandoEliminarTipoEstado.cs" />
+    <Compile Include="Comandos\ComandosTipoEstado\ComandoInsertarOModificarTipoEstado.cs" />
+    <Compile Include="Comandos\ComandosTipoEstado\ComandoVerificarExistenciaTipoEstado.cs" />
+    <Compile Include="Comandos\ComandosCondicion\ComandoConsultarTodosCondiciones.cs" />
+    <Compile Include="Comandos\ComandosAnaqua\ComandoConsultarTodosAnaqua.cs" />
+    <Compile Include="Comandos\ComandosAnaqua\ComandoEliminarAnaqua.cs" />
+    <Compile Include="Comandos\ComandosAnaqua\ComandoInsertarOModificarAnaqua.cs" />
+    <Compile Include="Comandos\ComandosAnaqua\ComandoVerificarExistenciaAnaqua.cs" />
+    <Compile Include="Comandos\ComandosInfoAdicional\ComandoConsultarTodasInfoAdicionales.cs" />
+    <Compile Include="Comandos\ComandosInfoAdicional\ComandoConsultarInfoAdicionalPorID.cs" />
+    <Compile Include="Comandos\ComandosInfoAdicional\ComandoEliminarInfoAdicional.cs" />
+    <Compile Include="Comandos\ComandosInfoAdicional\ComandoInsertarOModificarInfoAdicional.cs" />
+    <Compile Include="Comandos\ComandosInfoAdicional\ComandoVerificarExistenciaInfoAdicional.cs" />
+    <Compile Include="Comandos\ComandosInfoBol\ComandoConsultarInfoBolPorID.cs" />
+    <Compile Include="Comandos\ComandosInfoBol\ComandoConsultarTodasInfoBoles.cs" />
+    <Compile Include="Comandos\ComandosInfoBol\ComandoEliminarInfoBol.cs" />
+    <Compile Include="Comandos\ComandosInfoBol\ComandoInsertarOModificarInfoBol.cs" />
+    <Compile Include="Comandos\ComandosInfoBol\ComandoVerificarExistenciaInfoBol.cs" />
+    <Compile Include="Comandos\ComandosOperacion\ComandoConsultarOperacionesPorMarca.cs" />
+    <Compile Include="Comandos\ComandosOperacion\ComandoConsultarOperacionPorID.cs" />
+    <Compile Include="Comandos\ComandosOperacion\ComandoConsultarTodasOperaciones.cs" />
+    <Compile Include="Comandos\ComandosOperacion\ComandoEliminarOperacion.cs" />
+    <Compile Include="Comandos\ComandosOperacion\ComandoInsertarOModificarOperacion.cs" />
+    <Compile Include="Comandos\ComandosOperacion\ComandoVerificarExistenciaOperacion.cs" />
+    <Compile Include="Comandos\ComandosStatusWeb\ComandoConsultarTodosPaises.cs" />
+    <Compile Include="Comandos\ComandosStatusWeb\ComandoEliminarPais.cs" />
+    <Compile Include="Comandos\ComandosStatusWeb\ComandoInsertarOModificarPais.cs" />
+    <Compile Include="Comandos\ComandosStatusWeb\ComandoVerificarExistenciaPais.cs" />
+    <Compile Include="Comandos\ComandosFusion\ComandoConsultarTodosFusiones.cs" />
+    <Compile Include="Comandos\ComandosFusion\ComandoEliminarFusion.cs" />
+    <Compile Include="Comandos\ComandosFusion\ComandoInsertarOModificarFusion.cs" />
+    <Compile Include="Comandos\ComandosFusion\ComandoVerificarExistenciaFusion.cs" />
+    <Compile Include="Comandos\ComandosCambioDeNombre\ComandoConsultarTodosCambioDeNombre.cs" />
+    <Compile Include="Comandos\ComandosCambioDeNombre\ComandoEliminarCambioDeNombre.cs" />
+    <Compile Include="Comandos\ComandosCambioDeNombre\ComandoInsertarOModificarCambioDeNombre.cs" />
+    <Compile Include="Comandos\ComandosCambioDeNombre\ComandoVerificarExistenciaCambioDeNombre.cs" />
+    <Compile Include="Comandos\ComandosLicencia\ComandoConsultarTodosLicencia.cs" />
+    <Compile Include="Comandos\ComandosLicencia\ComandoEliminarLicencia.cs" />
+    <Compile Include="Comandos\ComandosLicencia\ComandoInsertarOModificarLicencia.cs" />
+    <Compile Include="Comandos\ComandosLicencia\ComandoVerificarExistenciaLicencia.cs" />
+    <Compile Include="Comandos\ComandosMarcaTercero\ComandoConsultarTodosMarcaTerceros.cs" />
+    <Compile Include="Comandos\ComandosMarcaTercero\ComandoEliminarMarcaTercero.cs" />
+    <Compile Include="Comandos\ComandosMarcaTercero\ComandoInsertarOModificarMarcaTercero.cs" />
+    <Compile Include="Comandos\ComandosMarcaTercero\ComandoVerificarExistenciaMarcaTercero.cs" />
+    <Compile Include="Comandos\ComandosPlanilla\ComandoConsultarPlanillaPorId.cs" />
+    <Compile Include="Comandos\ComandosRenovacion\ComandoConsultarTodosRenovacion.cs" />
+    <Compile Include="Comandos\ComandosRenovacion\ComandoEliminarRenovacion.cs" />
+    <Compile Include="Comandos\ComandosRenovacion\ComandoInsertarOModificarRenovacion.cs" />
+    <Compile Include="Comandos\ComandosPatente\ComandoConsultarPatenteConTodo.cs" />
+    <Compile Include="Comandos\ComandosPatente\ComandoConsultarPatentePorId.cs" />
+    <Compile Include="Comandos\ComandosPatente\ComandoConsultarPatentesFiltro.cs" />
+    <Compile Include="Comandos\ComandosPatente\ComandoConsultarTodasPatentes.cs" />
+    <Compile Include="Comandos\ComandosPatente\ComandoEliminarPatente.cs" />
+    <Compile Include="Comandos\ComandosPatente\ComandoInsertarOModificarPatente.cs" />
+    <Compile Include="Comandos\ComandosPatente\ComandoVerificarExistenciaPatente.cs" />
+    <Compile Include="Comandos\ComandosCambioDeDomicilioPatente\ComandoConsultarCambiosDeDomicilioPatenteFiltro.cs" />
+    <Compile Include="Comandos\ComandosCambioDeDomicilioPatente\ComandoConsultarTodosCambioDeDomicilioPatente.cs" />
+    <Compile Include="Comandos\ComandosCambioDeDomicilioPatente\ComandoEliminarCambioDeDomicilioPatente.cs" />
+    <Compile Include="Comandos\ComandosCambioDeDomicilioPatente\ComandoInsertarOModificarCambioDeDomicilioPatente.cs" />
+    <Compile Include="Comandos\ComandosCambioDeDomicilioPatente\ComandoVerificarExistenciaCambioDeDomicilioPatente.cs" />
+    <Compile Include="Comandos\ComandosCambioDeNombrePatente\ComandoConsultarCambiosDeNombreFiltroPatente.cs" />
+    <Compile Include="Comandos\ComandosCambioDeNombrePatente\ComandoConsultarTodosCambioDeNombrePatente.cs" />
+    <Compile Include="Comandos\ComandosCambioDeNombrePatente\ComandoEliminarCambioDeNombrePatente.cs" />
+    <Compile Include="Comandos\ComandosCambioDeNombrePatente\ComandoInsertarOModificarCambioDeNombrePatente.cs" />
+    <Compile Include="Comandos\ComandosCambioDeNombrePatente\ComandoVerificarExistenciaCambioDeNombrePatente.cs" />
+    <Compile Include="Comandos\ComandosCambioPeticionarioPatente\ComandoConsultarCambiosPeticionarioPatenteFiltro.cs" />
+    <Compile Include="Comandos\ComandosCambioPeticionarioPatente\ComandoConsultarTodosCambioPeticionarioPatente.cs" />
+    <Compile Include="Comandos\ComandosCambioPeticionarioPatente\ComandoEliminarCambioPeticionarioPatente.cs" />
+    <Compile Include="Comandos\ComandosCambioPeticionarioPatente\ComandoInsertarOModificarCambioPeticionarioPatente.cs" />
+    <Compile Include="Comandos\ComandosCambioPeticionarioPatente\ComandoVerificarExistenciaCambioPeticionarioPatente.cs" />
+    <Compile Include="Comandos\ComandosLicenciaPatente\ComandoConsultarLicenciasPatenteFiltro.cs" />
+    <Compile Include="Comandos\ComandosLicenciaPatente\ComandoConsultarTodosLicenciaPatente.cs" />
+    <Compile Include="Comandos\ComandosLicenciaPatente\ComandoEliminarLicenciaPatente.cs" />
+    <Compile Include="Comandos\ComandosLicenciaPatente\ComandoInsertarOModificarLicenciaPatente.cs" />
+    <Compile Include="Comandos\ComandosLicenciaPatente\ComandoVerificarExistenciaLicenciaPatente.cs" />
+    <Compile Include="Comandos\ComandosFusionPatente\ComandoConsultarFusionesPatenteFiltro.cs" />
+    <Compile Include="Comandos\ComandosFusionPatente\ComandoConsultarTodosFusionesPatente.cs" />
+    <Compile Include="Comandos\ComandosFusionPatente\ComandoEliminarFusionPatente.cs" />
+    <Compile Include="Comandos\ComandosFusionPatente\ComandoInsertarOModificarFusionPatente.cs" />
+    <Compile Include="Comandos\ComandosFusionPatente\ComandoVerificarExistenciaFusionPatente.cs" />
+    <Compile Include="Comandos\ComandosCesionPatente\ComandoConsultarCesionesPatenteFiltro.cs" />
+    <Compile Include="Comandos\ComandosCesionPatente\ComandoConsultarTodosCesionPatente.cs" />
+    <Compile Include="Comandos\ComandosCesionPatente\ComandoEliminarCesionPatente.cs" />
+    <Compile Include="Comandos\ComandosCesionPatente\ComandoInsertarOModificarCesionPatente.cs" />
+    <Compile Include="Comandos\ComandosCesionPatente\ComandoVerificarExistenciaCesionPatente.cs" />
+    <Compile Include="Comandos\ComandosInventor\ComandoConsultarTodosInventores.cs" />
+    <Compile Include="Comandos\ComandosInventor\ComandoEliminarInventor.cs" />
+    <Compile Include="Comandos\ComandosInventor\ComandoInsertarOModificarInventor.cs" />
+    <Compile Include="Comandos\ComandosInventor\ComandoVerificarExistenciaInventor.cs" />
+    <Compile Include="Comandos\ComandosAnualidad\ComandoConsultarTodasAnualidades.cs" />
+    <Compile Include="Comandos\ComandosAnualidad\ComandoEliminarAnualidad.cs" />
+    <Compile Include="Comandos\ComandosAnualidad\ComandoInsertarOModificarAnualidad.cs" />
+    <Compile Include="Comandos\ComandosInfoBolPatente\ComandoConsultarInfoBolesPorPatente.cs" />
+    <Compile Include="Comandos\ComandosInfoBolPatente\ComandoConsultarInfoBolPorID.cs" />
+    <Compile Include="Comandos\ComandosInfoBolPatente\ComandoConsultarTodasInfoBoles.cs" />
+    <Compile Include="Comandos\ComandosInfoBolPatente\ComandoEliminarInfoBol.cs" />
+    <Compile Include="Comandos\ComandosInfoBolPatente\ComandoInsertarOModificarInfoBol.cs" />
+    <Compile Include="Comandos\ComandosInfoBolPatente\ComandoVerificarExistenciaInfoBol.cs" />
+    <Compile Include="Comandos\ComandosMemoria\ComandoConsultarMemoriasPorPatente.cs" />
+    <Compile Include="Comandos\ComandosMemoria\ComandoEliminarMemoria.cs" />
+    <Compile Include="Comandos\ComandosMemoria\ComandoInsertarOModificarMemoria.cs" />
+    <Compile Include="Comandos\ComandosFecha\ComandoEliminarInventor.cs" />
+    <Compile Include="Comandos\ComandosFecha\ComandoInsertarOModificarFecha.cs" />
+    <Compile Include="Comandos\ComandosInfoBolMarcaTer\ComandoConsultarInfoBolMarcaTeresPorMarca.cs" />
+    <Compile Include="Comandos\ComandosInfoBolMarcaTer\ComandoConsultarInfoBolMarcaTerPorID.cs" />
+    <Compile Include="Comandos\ComandosInfoBolMarcaTer\ComandoConsultarTodasInfoBolMarcaTeres.cs" />
+    <Compile Include="Comandos\ComandosInfoBolMarcaTer\ComandoEliminarInfoBolMarcaTer.cs" />
+    <Compile Include="Comandos\ComandosInfoBolMarcaTer\ComandoInsertarOModificarInfoBolMarcaTer.cs" />
+    <Compile Include="Comandos\ComandosInfoBolMarcaTer\ComandoVerificarExistenciaInfoBolMarcaTer.cs" />
+    <Compile Include="Comandos\Receptor.cs" />
+    <Compile Include="Comandos\ComandosUsuario\ComandoConsultarTodosUsuarios.cs" />
+    <Compile Include="Comandos\ComandosUsuario\ComandoConsultarUsuarioPorID.cs" />
+    <Compile Include="Comandos\ComandosUsuario\ComandoInsertarOModificarUsuario.cs" />
+    <Compile Include="Fabrica\FabricaComandosInfoBolMarcaTer.cs" />
+    <Compile Include="Fabrica\FabricaComandosMemoria.cs" />
+    <Compile Include="Fabrica\FabricaComandosFecha.cs" />
+    <Compile Include="Fabrica\FabricaComandosInfoBolPatente.cs" />
+    <Compile Include="Fabrica\FabricaComandosAnualidad.cs" />
+    <Compile Include="Fabrica\FabricaComandosInventor.cs" />
+    <Compile Include="Fabrica\FabricaComandosCambioPeticionarioPatente.cs" />
+    <Compile Include="Fabrica\FabricaComandosCambioDeNombrePatente.cs" />
+    <Compile Include="Fabrica\FabricaComandosCambioDeDomicilioPatente.cs" />
+    <Compile Include="Fabrica\FabricaComandosCesionPatente.cs" />
+    <Compile Include="Fabrica\FabricaComandosFusionPatente.cs" />
+    <Compile Include="Fabrica\FabricaComandosLicenciaPatente.cs" />
+    <Compile Include="Fabrica\FabricaComandosPatente.cs" />
+    <Compile Include="Fabrica\FabricaComandosMarcaBaseTercero.cs" />
+    <Compile Include="Fabrica\FabricaComandosEstadoMarca.cs" />
+    <Compile Include="Fabrica\FabricaComandosRenovacion.cs" />
+    <Compile Include="Fabrica\FabricaComandosPlanilla.cs" />
+    <Compile Include="Fabrica\FabricaComandosMarcaTercero.cs" />
+    <Compile Include="Fabrica\FabricaComandosCambioPeticionario.cs" />
+    <Compile Include="Fabrica\FabricaComandosCambioDeDomicilio.cs" />
+    <Compile Include="Fabrica\FabricaComandosCesion.cs" />
+    <Compile Include="Fabrica\FabricaComandosLicencia.cs" />
+    <Compile Include="Fabrica\FabricaComandosCambioDeNombre.cs" />
+    <Compile Include="Fabrica\FabricaComandosFusion.cs" />
+    <Compile Include="Fabrica\FabricaComandosStatusWeb.cs" />
+    <Compile Include="Fabrica\FabricaComandosBusqueda.cs" />
+    <Compile Include="Fabrica\FabricaComandosOperacion.cs" />
+    <Compile Include="Fabrica\FabricaComandosInfoBol.cs" />
+    <Compile Include="Fabrica\FabricaComandosInfoAdicional.cs" />
+    <Compile Include="Fabrica\FabricaComandosAnaqua.cs" />
+    <Compile Include="Fabrica\FabricaComandosCondicion.cs" />
+    <Compile Include="Fabrica\FabricaComandosCorresponsal.cs" />
+    <Compile Include="Fabrica\FabricaComandosTipoBase.cs" />
+    <Compile Include="Fabrica\FabricaComandosTipoEstado.cs" />
+    <Compile Include="Fabrica\FabricaComandosServicio.cs" />
+    <Compile Include="Fabrica\FabricaComandosMarca.cs" />
+    <Compile Include="Fabrica\FabricaComandosListaDatosValores.cs" />
+    <Compile Include="Fabrica\FabricaComandosListaDatosDominio.cs" />
+    <Compile Include="Fabrica\FabricaComandosAsignacion.cs" />
+    <Compile Include="Fabrica\FabricaComandosContadorAsignacion.cs" />
+    <Compile Include="Fabrica\FabricaComandosEntradaAlterna.cs" />
+    <Compile Include="Fabrica\FabricaComandosCartaOut.cs" />
+    <Compile Include="Fabrica\FabricaComandosRemitente.cs" />
+    <Compile Include="Fabrica\FabricaComandosCategoria.cs" />
+    <Compile Include="Fabrica\FabricaComandosMedio.cs" />
+    <Compile Include="Fabrica\FabricaComandoAuditoria.cs" />
+    <Compile Include="Fabrica\FabricaComandosAnexo.cs" />
+    <Compile Include="Fabrica\FabricaComandosResumen.cs" />
+    <Compile Include="Fabrica\FabricaComandosDatosTransferencia.cs" />
+    <Compile Include="Fabrica\FabricaComandosContacto.cs" />
+    <Compile Include="Fabrica\FabricaComandosCarta.cs" />
+    <Compile Include="Fabrica\FabricaComandosContadorFac.cs" />
+    <Compile Include="Fabrica\FabricaComandosAsociado.cs" />
+    <Compile Include="Fabrica\FabricaComandosJustificacion.cs" />
+    <Compile Include="Fabrica\FabricaComandosConcepto.cs" />
+    <Compile Include="Fabrica\FabricaComandosDetallePago.cs" />
+    <Compile Include="Fabrica\FabricaComandosTipoCliente.cs" />
+    <Compile Include="Fabrica\FabricaComandosTarifa.cs" />
+    <Compile Include="Fabrica\FabricaComandosMoneda.cs" />
+    <Compile Include="Fabrica\FabricaComandosIdioma.cs" />
+    <Compile Include="Fabrica\FabricaComandosEtiqueta.cs" />
+    <Compile Include="Fabrica\FabricaComandosInteresado.cs" />
+    <Compile Include="Fabrica\FabricaComandosContadorAuditoria.cs" />
+    <Compile Include="Fabrica\FabricaComandosContador.cs" />
+    <Compile Include="Fabrica\FabricaComandosPoder.cs" />
+    <Compile Include="Fabrica\FabricaComandosResolucion.cs" />
+    <Compile Include="Fabrica\FabricaComandosEstatus.cs" />
+    <Compile Include="Fabrica\FabricaComandosTipoFecha.cs" />
+    <Compile Include="Fabrica\FabricaComandosTipoInfobol.cs" />
+    <Compile Include="Fabrica\FabricaComandosInternacional.cs" />
+    <Compile Include="Fabrica\FabricaComandosBoletin.cs" />
+    <Compile Include="Fabrica\FabricaComandosNacional.cs" />
+    <Compile Include="Fabrica\FabricaComandosPais.cs" />
+    <Compile Include="Fabrica\FabricaComandosAuditoria.cs" />
+    <Compile Include="Fabrica\FabricaComandosEstado.cs" />
+    <Compile Include="Fabrica\FabricaComandosAgente.cs" />
+    <Compile Include="Fabrica\FabricaComandosObjeto.cs" />
+    <Compile Include="Fabrica\FabricaComandosRol.cs" />
+    <Compile Include="Fabrica\FabricaComandosDepartamento.cs" />
+    <Compile Include="Fabrica\FabricaComandosUsuario.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Comun\ObjetosComunes\ObjetosComunes.csproj">
+      <Project>{15437671-F551-4B4B-9E06-283A1D241CE0}</Project>
+      <Name>ObjetosComunes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AccesoDatos\AccesoDatos.csproj">
+      <Project>{4A1F952F-5803-4767-872E-EB1A35E0DAA6}</Project>
+      <Name>AccesoDatos</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

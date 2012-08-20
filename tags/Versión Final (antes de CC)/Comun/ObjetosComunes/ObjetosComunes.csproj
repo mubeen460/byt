@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{15437671-F551-4B4B-9E06-283A1D241CE0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Trascend.Bolet.ObjetosComunes</RootNamespace>
+    <AssemblyName>Trascend.Bolet.ObjetosComunes</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ContratosServicios\IInfoBolMarcaTerServicios.cs" />
+    <Compile Include="ContratosServicios\IMemoriaServicios.cs" />
+    <Compile Include="ContratosServicios\IFechaServicios.cs" />
+    <Compile Include="ContratosServicios\IInfoBolPatenteServicios.cs" />
+    <Compile Include="ContratosServicios\IAnualidadServicios.cs" />
+    <Compile Include="ContratosServicios\IInventorServicios.cs" />
+    <Compile Include="ContratosServicios\ICambioDeDomicilioPatenteServicios.cs" />
+    <Compile Include="ContratosServicios\ICambioDeNombrePatenteServicios.cs" />
+    <Compile Include="ContratosServicios\ICambioPeticionarioPatenteServicios.cs" />
+    <Compile Include="ContratosServicios\IFusionPatenteServicios.cs" />
+    <Compile Include="ContratosServicios\ICesionPatenteServicios.cs" />
+    <Compile Include="ContratosServicios\ILicenciaPatenteServicios.cs" />
+    <Compile Include="ContratosServicios\IPatenteServicios.cs" />
+    <Compile Include="ContratosServicios\IMarcaBaseTerceroServicios.cs" />
+    <Compile Include="ContratosServicios\IEstadoMarcaServicios.cs" />
+    <Compile Include="ContratosServicios\IRenovacionServicios.cs" />
+    <Compile Include="ContratosServicios\IPlanillaServicios.cs" />
+    <Compile Include="ContratosServicios\IMarcaTerceroServicios.cs" />
+    <Compile Include="ContratosServicios\ICambioPeticionarioServicios.cs" />
+    <Compile Include="ContratosServicios\ICambioDeDomicilioServicios.cs" />
+    <Compile Include="ContratosServicios\ILicenciaServicios.cs" />
+    <Compile Include="ContratosServicios\ICambioDeNombreServicios.cs" />
+    <Compile Include="ContratosServicios\ICesionServicios.cs" />
+    <Compile Include="ContratosServicios\IFusionServicios.cs" />
+    <Compile Include="ContratosServicios\IStatusWebServicios.cs" />
+    <Compile Include="ContratosServicios\IBusquedaServicios.cs" />
+    <Compile Include="ContratosServicios\IOperacionServicios.cs" />
+    <Compile Include="ContratosServicios\IInfoBolServicios.cs" />
+    <Compile Include="ContratosServicios\IInfoAdicionalServicios.cs" />
+    <Compile Include="ContratosServicios\IAnaquaServicios.cs" />
+    <Compile Include="ContratosServicios\ICondicionServicios.cs" />
+    <Compile Include="ContratosServicios\ICorresponsalServicios.cs" />
+    <Compile Include="ContratosServicios\ITipoBaseServicios.cs" />
+    <Compile Include="ContratosServicios\ITipoEstadoServicios.cs" />
+    <Compile Include="ContratosServicios\IServicioServicios.cs" />
+    <Compile Include="ContratosServicios\IMarcaServicios.cs" />
+    <Compile Include="ContratosServicios\IListaDatosValoresServicios.cs" />
+    <Compile Include="ContratosServicios\IListaDatosDominioServicios.cs" />
+    <Compile Include="ContratosServicios\IAsignacionServicios.cs" />
+    <Compile Include="ContratosServicios\IEntradaAlternaServicios.cs" />
+    <Compile Include="ContratosServicios\ICartaOutServicios.cs" />
+    <Compile Include="ContratosServicios\IRemitenteServicios.cs" />
+    <Compile Include="ContratosServicios\ICategoriaServicios.cs" />
+    <Compile Include="ContratosServicios\IMedioServicios.cs" />
+    <Compile Include="ContratosServicios\IAnexoServicios.cs" />
+    <Compile Include="ContratosServicios\IResumenServicios.cs" />
+    <Compile Include="ContratosServicios\IDatosTransferenciaServicios.cs" />
+    <Compile Include="ContratosServicios\ICartaServicios.cs" />
+    <Compile Include="ContratosServicios\IContactoServicios.cs" />
+    <Compile Include="ContratosServicios\IAsociadoServicios.cs" />
+    <Compile Include="ContratosServicios\IJustificacionServicios.cs" />
+    <Compile Include="ContratosServicios\IConceptoServicios.cs" />
+    <Compile Include="ContratosServicios\IDetallePagoServicios.cs" />
+    <Compile Include="ContratosServicios\ITipoClienteServicios.cs" />
+    <Compile Include="ContratosServicios\ITarifaServicios.cs" />
+    <Compile Include="ContratosServicios\IMonedaServicios.cs" />
+    <Compile Include="ContratosServicios\IIdiomaServicios.cs" />
+    <Compile Include="ContratosServicios\IEtiquetaServicios.cs" />
+    <Compile Include="ContratosServicios\IInteresadoServicios.cs" />
+    <Compile Include="ContratosServicios\IPoderServicios.cs" />
+    <Compile Include="ContratosServicios\IEstatusServicios.cs" />
+    <Compile Include="ContratosServicios\ITipoFechaServicios.cs" />
+    <Compile Include="ContratosServicios\IResolucionServicios.cs" />
+    <Compile Include="ContratosServicios\ITipoInfobolServicios.cs" />
+    <Compile Include="ContratosServicios\IInternacionalServicios.cs" />
+    <Compile Include="ContratosServicios\IBoletinServicios.cs" />
+    <Compile Include="ContratosServicios\INacionalServicios.cs" />
+    <Compile Include="ContratosServicios\IPaisServicios.cs" />
+    <Compile Include="ContratosServicios\IAgenteServicios.cs" />
+    <Compile Include="ContratosServicios\IDepartamentoServicios.cs" />
+    <Compile Include="ContratosServicios\IEstadoServicios.cs" />
+    <Compile Include="ContratosServicios\IObjetoServicios.cs" />
+    <Compile Include="ContratosServicios\IRolServicios.cs" />
+    <Compile Include="ContratosServicios\IServicioBase.cs" />
+    <Compile Include="Entidades\Auditoria.cs" />
+    <Compile Include="Entidades\Agente.cs" />
+    <Compile Include="Entidades\Busqueda.cs" />
+    <Compile Include="Entidades\Concepto.cs" />
+    <Compile Include="Entidades\Contacto.cs" />
+    <Compile Include="Entidades\Contador.cs" />
+    <Compile Include="Entidades\ContadorAuditoria.cs" />
+    <Compile Include="Entidades\Asociado.cs" />
+    <Compile Include="Entidades\ContadorFac.cs" />
+    <Compile Include="Entidades\Carta.cs" />
+    <Compile Include="Entidades\Anexo.cs" />
+    <Compile Include="Entidades\ContadorAsignacion.cs" />
+    <Compile Include="Entidades\Asignacion.cs" />
+    <Compile Include="Entidades\Condicion.cs" />
+    <Compile Include="Entidades\Anaqua.cs" />
+    <Compile Include="Entidades\Cesion.cs" />
+    <Compile Include="Entidades\CambioDeDomicilio.cs" />
+    <Compile Include="Entidades\CambioPeticionario.cs" />
+    <Compile Include="Entidades\CambioDeNombre.cs" />
+    <Compile Include="Entidades\CambioDeDomicilioPatente.cs" />
+    <Compile Include="Entidades\CambioDeNombrePatente.cs" />
+    <Compile Include="Entidades\CambioPeticionarioPatente.cs" />
+    <Compile Include="Entidades\CesionPatente.cs" />
+    <Compile Include="Entidades\Anualidad.cs" />
+    <Compile Include="Entidades\InfoBolMarcaTer.cs" />
+    <Compile Include="Entidades\Memoria.cs" />
+    <Compile Include="Entidades\Fecha.cs" />
+    <Compile Include="Entidades\InfoBolPatente.cs" />
+    <Compile Include="Entidades\FusionPatente.cs" />
+    <Compile Include="Entidades\LicenciaPatente.cs" />
+    <Compile Include="Entidades\Inventor.cs" />
+    <Compile Include="Entidades\Patente.cs" />
+    <Compile Include="Entidades\MarcaBaseTercero.cs" />
+    <Compile Include="Entidades\ParametroProcedimiento.cs" />
+    <Compile Include="Entidades\EstadoMarca.cs" />
+    <Compile Include="Entidades\Renovacion.cs" />
+    <Compile Include="Entidades\Planilla.cs" />
+    <Compile Include="Entidades\MarcaTercero.cs" />
+    <Compile Include="Entidades\Licencia.cs" />
+    <Compile Include="Entidades\Fusion.cs" />
+    <Compile Include="Entidades\RecordatorioVista.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entidades\StatusWeb.cs" />
+    <Compile Include="Entidades\Operacion.cs" />
+    <Compile Include="Entidades\InfoBol.cs" />
+    <Compile Include="Entidades\InfoAdicional.cs" />
+    <Compile Include="Entidades\Corresponsal.cs" />
+    <Compile Include="Entidades\TipoBase.cs" />
+    <Compile Include="Entidades\TipoEstado.cs" />
+    <Compile Include="Entidades\Marca.cs" />
+    <Compile Include="Entidades\Servicio.cs" />
+    <Compile Include="Entidades\ListaDatosDominio.cs" />
+    <Compile Include="Entidades\ListaDatosValores.cs" />
+    <Compile Include="Entidades\EntradaAlterna.cs" />
+    <Compile Include="Entidades\CartaOut.cs" />
+    <Compile Include="Entidades\Remitente.cs" />
+    <Compile Include="Entidades\Categoria.cs" />
+    <Compile Include="Entidades\Medio.cs" />
+    <Compile Include="Entidades\DatosTransferencia.cs" />
+    <Compile Include="Entidades\Resumen.cs" />
+    <Compile Include="Entidades\DetallePago.cs" />
+    <Compile Include="Entidades\Justificacion.cs" />
+    <Compile Include="Entidades\Tarifa.cs" />
+    <Compile Include="Entidades\Etiqueta.cs" />
+    <Compile Include="Entidades\TipoCliente.cs" />
+    <Compile Include="Entidades\Moneda.cs" />
+    <Compile Include="Entidades\Idioma.cs" />
+    <Compile Include="Entidades\Estatus.cs" />
+    <Compile Include="Entidades\Interesado.cs" />
+    <Compile Include="Entidades\Poder.cs" />
+    <Compile Include="Entidades\TipoFecha.cs" />
+    <Compile Include="Entidades\Resolucion.cs" />
+    <Compile Include="Entidades\TipoInfobol.cs" />
+    <Compile Include="Entidades\Internacional.cs" />
+    <Compile Include="Entidades\Boletin.cs" />
+    <Compile Include="Entidades\Nacional.cs" />
+    <Compile Include="Entidades\Pais.cs" />
+    <Compile Include="Entidades\Departamento.cs" />
+    <Compile Include="ContratosServicios\IUsuarioServicios.cs" />
+    <Compile Include="Entidades\Estado.cs" />
+    <Compile Include="Entidades\Objeto.cs" />
+    <Compile Include="Entidades\Rol.cs" />
+    <Compile Include="Entidades\Usuario.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
