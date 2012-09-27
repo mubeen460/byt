@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Trascend.Bolet.ObjetosComunes"
+                   namespace="Trascend.Bolet.ObjetosComunes.Entidades">
+  <class name="Resumen" table="RESUMEN">
+    <id name="Id" column="CODRES" type="string"/>
+    <property name="Descripcion" type="string" column="DESC_RES" />
+    <property name="Seg" type="char" column="ISEG" />
+    <property name="Dias" type="int" column="`NDIAS`" />
+
+    <bag name="Cartas" table="ENTRADA">
+      <key column="CODRES"/>
+      <many-to-many column="CODIGO" class="Carta" not-found="ignore"/>
+    </bag>
+  </class>
+
+</hibernate-mapping>
+
+
