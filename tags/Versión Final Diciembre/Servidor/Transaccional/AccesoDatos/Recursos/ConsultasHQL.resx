@@ -1,0 +1,1042 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CabeceraObtenerCarta" xml:space="preserve">
+    <value>Select c from Carta c left join fetch c.Resumen as resumen left join fetch c.Asociado as asociado left join fetch c.Departamento as dpto where </value>
+    <comment>Cabecera del query para el filtro de cartas</comment>
+  </data>
+  <data name="FiltroObtenerCartaFecha" xml:space="preserve">
+    <value>c.Fecha between '{0}' and '{1}'</value>
+  </data>
+  <data name="FiltroObtenerCartaId" xml:space="preserve">
+    <value>c.Id = {0}</value>
+    <comment>Filtro por Id</comment>
+  </data>
+  <data name="FiltroObtenerCartaIdAsociado" xml:space="preserve">
+    <value>asociado.Id = {0}</value>
+    <comment>Filtro por Asociado</comment>
+  </data>
+  <data name="FiltroObtenerCartaResumen" xml:space="preserve">
+    <value>upper(resumen.Descripcion) like '%{0}%'</value>
+  </data>
+  <data name="ObtenerAgentesYPoderes" xml:space="preserve">
+    <value>Select distinct(a) from Agente a left join fetch a.Poderes order by a.Id</value>
+    <comment>Selecciona todos los agentes y sus objetos</comment>
+  </data>
+  <data name="ObtenerAsignacionesPorCarta" xml:space="preserve">
+    <value>Select a from Asignacion a where a.Carta = '{0}'</value>
+    <comment>Consulta las asignaciones de una carta determinada</comment>
+  </data>
+  <data name="ObtenerAsociadoConTodo" xml:space="preserve">
+    <value>Select distinct(a) from Asociado a left outer join fetch a.Justificaciones left outer join fetch a.Emails where a.Id = '{0}' order by a.Id</value>
+    <comment>Selecciona el asociado con todas sus listas</comment>
+  </data>
+  <data name="ObtenerAuditoriaPorFKYTabla" xml:space="preserve">
+    <value>Select a from Auditoria a where a.Fk = '{0}' and a.Tabla = '{1}' ORDER BY a.Fecha DESC</value>
+    <comment>Selecciona todas las auditorias que poseen una FK en una tabla espacifica</comment>
+  </data>
+  <data name="ObtenerContactosPorAsociado" xml:space="preserve">
+    <value>Select c from Contacto c left outer join fetch c.Asociado where c.Asociado.id = {0}</value>
+    <comment>Selecciona todos los contactos de un asociado</comment>
+  </data>
+  <data name="ObtenerDatosTransferenciaPorAsociado" xml:space="preserve">
+    <value>Select d from DatosTransferencia d where d.Asociado.id = '{0}'</value>
+    <comment>Selecciona todos los datos de transferencia de un asociado</comment>
+  </data>
+  <data name="ObtenerListaDatosValoresPorParametro" xml:space="preserve">
+    <value>Select distinct(l) from ListaDatosValores l where l.Id = '{0}' order by l.Valor</value>
+    <comment>Trae la lista de valores por el parametro del id</comment>
+  </data>
+  <data name="ObtenerListaDatosDominioPorParametro" xml:space="preserve">
+    <value>Select l from ListaDatosDominio l where l.Filtro = '{0}'</value>
+    <comment>Obtiene la lista de valores respectiva a la tabla CFG_DOMINIOS con el parametro que se le pase</comment>
+  </data>
+  <data name="ObtenerPoderesPorInteresado" xml:space="preserve">
+    <value>Select p from Poder p left join fetch p.Interesado as interesado where p.Interesado.Id = '{0}' order by p.Id desc</value>
+    <comment>Selecciona todas los poderes que posee un interesado</comment>
+  </data>
+  <data name="ObtenerRolesYObjetos" xml:space="preserve">
+    <value>Select distinct(r) from Rol r left join fetch r.Objetos order by r.Id</value>
+    <comment>Selecciona todos los roles y sus objetos</comment>
+  </data>
+  <data name="ObtenerUsuarioPorIdYPassword" xml:space="preserve">
+    <value>Select u from Usuario u left join fetch u.Rol as rol left join fetch rol.Objetos where u.Id = '{0}' and u.Password = '{1}'</value>
+    <comment>Selecciona el usuario, rol y objetos, si el Id y el Password concuerdan con algún usuario de la BD</comment>
+  </data>
+  <data name="ObtenerUsuarioPorIniciales" xml:space="preserve">
+    <value>Select u from Usuario u where u.Iniciales='{0}'</value>
+    <comment>Selecciona un usuario por sus iniciales</comment>
+  </data>
+  <data name="VerificarExistenciaResolucion" xml:space="preserve">
+    <value>Select r from Resolucion r where r.Id = {0} and r.FechaResolucion = '{1}' and r.Boletin.Id =  {2}</value>
+    <comment>Verifica si existe una resolucion por sus ids</comment>
+  </data>
+  <data name="CabeceraObtenerCartaOut" xml:space="preserve">
+    <value>Select c from CartaOut c where </value>
+    <comment>Cabecera del query para el filtro de CartaOut</comment>
+  </data>
+  <data name="FiltroObtenerCartaOutStatus" xml:space="preserve">
+    <value>c.Status = '{0}'</value>
+    <comment>Filtro agregado a la cabecera para filtrar por status</comment>
+  </data>
+  <data name="FiltroObtenerCartaOutId" xml:space="preserve">
+    <value>c.NRelacion like '{0}%'</value>
+  </data>
+  <data name="FiltroObtenerCartaOutFecha" xml:space="preserve">
+    <value>c.FechaIngreso between '{0}' and '{1}'</value>
+  </data>
+  <data name="CabeceraObtenerMarca" xml:space="preserve">
+    <value>Select m from Marca m left join fetch m.Asociado as asociado left join fetch m.Agente as agente left join fetch m.Corresponsal as corresponsal left join fetch m.Interesado as interesado left join fetch asociado.Pais as pais left join fetch asociado.Idioma as idioma left join fetch m.BoletinConcesion as boletinC left join fetch m.BoletinPublicacion as boletinP left join fetch m.BoletinOrdenPublicacion as boletinO left join fetch m.Nacional as nacional left join fetch m.Internacional as internacional left join fetch m.Servicio as servicio where </value>
+    <comment>Cabecera del query para el filtro de marcas</comment>
+  </data>
+  <data name="FiltroObtenerMarcaDescripcion" xml:space="preserve">
+    <value>upper(m.Descripcion) like '%{0}%'</value>
+  </data>
+  <data name="FiltroObtenerMarcaFecha" xml:space="preserve">
+    <value>m.FechaPublicacion between '{0}' and '{1}'</value>
+  </data>
+  <data name="FiltroObtenerMarcaFichas" xml:space="preserve">
+    <value>upper(m.Fichas) like '%{0}%'</value>
+  </data>
+  <data name="FiltroObtenerMarcaId" xml:space="preserve">
+    <value>m.Id = {0}</value>
+    <comment>Filtro por Id</comment>
+  </data>
+  <data name="FiltroObtenerMarcaIdAsociado" xml:space="preserve">
+    <value>asociado.Id = {0}</value>
+    <comment>Filtro por Asociado</comment>
+  </data>
+  <data name="ObtenerInteresadoConTodo" xml:space="preserve">
+    <value>Select distinct(i) from Interesado i left join fetch i.Pais left join fetch i.Nacionalidad where i.Id = '{0}' order by i.Id</value>
+    <comment>Selecciona el asociado con todas sus objetos</comment>
+  </data>
+  <data name="ObtenerMarcaConTodo" xml:space="preserve">
+    <value>Select m from Marca m left join fetch m.Asociado as asociado left join fetch m.Corresponsal as corresponsal left join fetch m.Servicio as servicio left join fetch m.Agente as agente left join fetch m.Interesado as interesado left join fetch interesado.Pais as pais left join fetch interesado.Nacionalidad as nacionalidad where m.Id = '{0}' order by m.Id</value>
+  </data>
+  <data name="ObtenerInfoAdicinalPorId" xml:space="preserve">
+    <value>Select i from InfoAdicinal i where i.Id = '{0}'</value>
+    <comment>Obtiene una info adicional dado su id</comment>
+  </data>
+  <data name="ObtenerInfoBolesPorMarcas" xml:space="preserve">
+    <value>Select i from InfoBol i left outer join fetch i.TipoInfobol where i.Marca.Id = '{0}'</value>
+    <comment>Obtener todos los infoboles de una marca</comment>
+  </data>
+  <data name="ObtenerOperacionesPorMarcas" xml:space="preserve">
+    <value>Select o from Operacion o where o.CodigoAplicada = {0} and o.Aplicada = 'M'</value>
+    <comment>Obtener todos las operaciones de una marca</comment>
+  </data>
+  <data name="ObtenerBusquedasPorMarca" xml:space="preserve">
+    <value>Select b from Busqueda b where b.Marca.Id = '{0}'</value>
+    <comment>Obtiene las busquedas que pertenecen a una marca determinada</comment>
+  </data>
+  <data name="ObtenerOperacionesPorMarcasYServicio" xml:space="preserve">
+    <value>Select o from Operacion o where o.CodigoAplicada = {0} and o.Aplicada = 'M' and o.Servicio.Id = '{1}'</value>
+    <comment>Obtener todos las operaciones de una marca y con un servicio</comment>
+  </data>
+  <data name="FiltroObtenerMarcaIdInteresado" xml:space="preserve">
+    <value>interesado.Id = {0}</value>
+    <comment>Filtro por Interesado</comment>
+  </data>
+  <data name="CabeceraObtenerFusion" xml:space="preserve">
+    <value>Select f from Fusion f left join fetch f.Marca as marca left join fetch f.InteresadoEntre as interesadoEntre left join fetch f.InteresadoSobreviviente as interesadoSobreviviente left join fetch f.Agente as agente left join fetch f.Poder as poder where </value>
+    <comment>Cabecera del query para el filtro de fusion</comment>
+  </data>
+  <data name="FiltroObtenerFusionFecha" xml:space="preserve">
+    <value>f.Fecha between '{0}' and '{1}'</value>
+  </data>
+  <data name="FiltroObtenerFusionId" xml:space="preserve">
+    <value>f.Id = {0}</value>
+    <comment>Filtro por Id</comment>
+  </data>
+  <data name="FiltroObtenerFusionIdMarca" xml:space="preserve">
+    <value>marca.Id = {0}</value>
+    <comment>Filtro por marca</comment>
+  </data>
+  <data name="CabeceraObtenerCesion" xml:space="preserve">
+    <value>Select c from Cesion c left join fetch c.Marca as marca left join fetch c.Cedente as cedente left join fetch c.AgenteCedente as agenteCed left join fetch c.AgenteCesionario as agenteCes left join fetch c.PoderCedente as PoderCed  left join fetch c.PoderCesionario as PoderCes left join fetch c.Cedente as interesadoCed left join fetch c.Cesionario as interesadoCes left join fetch c.BoletinPublicacion as boletin where </value>
+    <comment>Cabecera del query para el filtro de cesion</comment>
+  </data>
+  <data name="FiltroObtenerCesionFecha" xml:space="preserve">
+    <value>c.FechaCesion between '{0}' and '{1}'</value>
+    <comment>Filtro agregado a la cabecera para filtrar por fecha</comment>
+  </data>
+  <data name="FiltroObtenerCesionId" xml:space="preserve">
+    <value>c.Id = {0}</value>
+    <comment>Filtro por Id</comment>
+  </data>
+  <data name="FiltroObtenerCesionIdMarca" xml:space="preserve">
+    <value>marca.Id = {0}</value>
+    <comment>Filtro por Marca</comment>
+  </data>
+  <data name="CabeceraObtenerInteresado" xml:space="preserve">
+    <value>Select i from Interesado i left outer join i.Pais as pais left outer join i.Corporacion as corporacion where </value>
+    <comment>Cabecera del query para el filtro de interesados</comment>
+  </data>
+  <data name="FiltroObtenerInteresadoId" xml:space="preserve">
+    <value>i.Id = {0}</value>
+    <comment>Filtro por Id</comment>
+  </data>
+  <data name="FiltroObtenerInteresadoNombre" xml:space="preserve">
+    <value>upper(i.Nombre) like '%{0}%'</value>
+    <comment>Filtro por Nombre</comment>
+  </data>
+  <data name="CabeceraObtenerAgente" xml:space="preserve">
+    <value>Select distinct(a) from Agente a left join fetch a.Poderes as poder where </value>
+    <comment>Cabecera del query para el filtro de agentes</comment>
+  </data>
+  <data name="FiltroObtenerAgenteId" xml:space="preserve">
+    <value>upper(a.Id) = '{0}'</value>
+    <comment>Filtro por Id</comment>
+  </data>
+  <data name="FiltroObtenerAgenteNombre" xml:space="preserve">
+    <value>upper(a.Nombre) like '%{0}%'</value>
+    <comment>Filtro por Nombre</comment>
+  </data>
+  <data name="CabeceraObtenerPoder" xml:space="preserve">
+    <value>Select p from Poder p left join fetch p.Boletin as boletin left join fetch p.Interesado as interesado where </value>
+    <comment>Cabecera del query para el filtro de Poderes</comment>
+  </data>
+  <data name="FiltroObtenerPoderFecha" xml:space="preserve">
+    <value>p.Fecha between '{0}' and '{1}'</value>
+    <comment>Filtro por fecha</comment>
+  </data>
+  <data name="FiltroObtenerPoderId" xml:space="preserve">
+    <value>p.Id = {0}</value>
+    <comment>Filtro por Id</comment>
+  </data>
+  <data name="ObtenerPoderesPorAgente" xml:space="preserve">
+    <value>Select a from Agente a left join fetch a.Poderes as poder where a.Id = '{0}'</value>
+    <comment>Selecciona todas los poderes que posee un Agente</comment>
+  </data>
+  <data name="ObtenerAgentesDeUnPoder" xml:space="preserve">
+    <value>Select p from Poder p left join fetch p.Agentes where p.Id = '{0}' order by p.Id desc</value>
+    <comment>Selecciona todos los agentes que tienen un poder</comment>
+  </data>
+  <data name="ObtenerInteresadosDeUnPoder" xml:space="preserve">
+    <value>Select p from Poder p left join fetch p.Interesado where p.Id ='{0}' order by p.Id desc</value>
+  </data>
+  <data name="CabeceraObtenerLicencia" xml:space="preserve">
+    <value>Select l from Licencia l left join fetch l.Marca as marca left join fetch l.AgenteLicenciatario as Alicentario left join fetch l.AgenteLicenciante as Alice left join fetch l.Asociado as asosia left join fetch l.Boletin as boletin left join fetch l.InteresadoLicenciatario as InterLicen left join fetch l.InteresadoLicenciante left join fetch l.PoderLicenciatario as Plicentario left join fetch l.PoderLicenciante as Plicenciant Where </value>
+    <comment>Cabecera del query para filtro con Licencia</comment>
+  </data>
+  <data name="FiltroObtenerLicenciaFecha" xml:space="preserve">
+    <value>l.Fecha between '{0}' and '{1}'</value>
+    <comment>Filtro por fecha</comment>
+  </data>
+  <data name="FiltroObtenerLicenciaId" xml:space="preserve">
+    <value>l.Id = {0}</value>
+    <comment>Filtro por id</comment>
+  </data>
+  <data name="FiltroObtenerLicenciaIdMarca" xml:space="preserve">
+    <value>marca.Id = {0}</value>
+    <comment>Filtro por marca</comment>
+  </data>
+  <data name="CabeceraObtenerCambioDeDomicilio" xml:space="preserve">
+    <value>Select c from CambioDeDomicilio c left join fetch c.Marca as marca left join fetch c.InteresadoActual as interesadoActual left join fetch c.InteresadoAnterior as interesadoAnterior left join fetch c.Agente as agente  left join fetch c.Poder as poder where </value>
+    <comment>Cabecera del query para el filtro de Cambio de domicilio</comment>
+  </data>
+  <data name="FiltroObtenerCambioDeDomicilioId" xml:space="preserve">
+    <value>c.Id = {0}</value>
+    <comment>Filtro por Id</comment>
+  </data>
+  <data name="FiltroObtenerCambioDeDomicilioIdMarca" xml:space="preserve">
+    <value>marca.Id = {0}</value>
+    <comment>Filtro por marca</comment>
+  </data>
+  <data name="CabeceraObtenerCambioDeNombre" xml:space="preserve">
+    <value>Select c from CambioDeNombre c left join fetch c.Marca as marca left join fetch c.InteresadoActual as interesadoActual left join fetch c.InteresadoAnterior as interesadoAnterior left join fetch c.Agente as agente left join fetch c.Poder as poder where </value>
+    <comment>Cabecera del filtro para Cambio De Nombre</comment>
+  </data>
+  <data name="FiltroObtenerCambioDeNombreId" xml:space="preserve">
+    <value>c.Id = {0}</value>
+    <comment>Filtra por id</comment>
+  </data>
+  <data name="FiltroObtenerCambioDeNombreIdMarca" xml:space="preserve">
+    <value>marca.Id = {0}</value>
+    <comment>Filtra por id de la marca</comment>
+  </data>
+  <data name="CabeceraObtenerCambioPeticionario" xml:space="preserve">
+    <value>Select c from CambioPeticionario c left join fetch c.Marca as marca left join fetch c.InteresadoAnterior as anterior left join fetch c.AgenteAnterior as agenteAnt left join fetch c.AgenteActual as agenteAct left join fetch c.PoderAnterior as PoderAnt  left join fetch c.PoderActual as PoderAct left join fetch c.InteresadoAnterior as interesadoAnt left join fetch c.InteresadoActual as interesadoAct left join fetch c.BoletinPublicacion as boletin where </value>
+    <comment>Cabecera del query para el filtro de fusion</comment>
+  </data>
+  <data name="FiltroObtenerCambioPeticionarioFecha" xml:space="preserve">
+    <value>c.FechaCesion between '{0}' and '{1}'</value>
+    <comment>Filtro agregado a la cabecera para filtrar por fecha</comment>
+  </data>
+  <data name="FiltroObtenerCambioPeticionarioId" xml:space="preserve">
+    <value>c.Id = {0}</value>
+    <comment>Filtro por Id</comment>
+  </data>
+  <data name="FiltroObtenerCambioPeticionarioIdMarca" xml:space="preserve">
+    <value>marca.Id = {0}</value>
+    <comment>Filtro por Marca</comment>
+  </data>
+  <data name="CabeceraObtenerAsociado" xml:space="preserve">
+    <value>Select a from Asociado a left join fetch a.Pais as pais left join fetch a.Idioma as idioma left join fetch a.Moneda as moneda left join fetch a.TipoCliente as tipoCliente left join fetch a.Tarifa as tarifa left join fetch a.Etiqueta as etiqueta left join fetch a.DetallePago as detallePago where </value>
+    <comment>Cabecera del query para el filtro de asociados</comment>
+  </data>
+  <data name="FiltroObtenerAsociadoId" xml:space="preserve">
+    <value>a.Id = {0}</value>
+    <comment>Filtro por Id</comment>
+  </data>
+  <data name="FiltroObtenerAsociadoNombre" xml:space="preserve">
+    <value>upper(a.Nombre) like '%{0}%'</value>
+    <comment>Filtro por Nombre</comment>
+  </data>
+  <data name="CabeceraObtenerRenovacion" xml:space="preserve">
+    <value>Select r from Renovacion r left join fetch r.Marca as marca left join fetch r.Interesado as interesado left join fetch r.Agente as agente  left join fetch r.Poder as poder  left join fetch r.BoletinPublicacion as boletin where </value>
+    <comment>Cabecera del query para el filtro de Renovacion</comment>
+  </data>
+  <data name="FiltroObtenerRenovacionFecha" xml:space="preserve">
+    <value>r.Fecha between '{0}' and '{1}'</value>
+    <comment>Filtro por fecha</comment>
+  </data>
+  <data name="FiltroObtenerRenovacionId" xml:space="preserve">
+    <value>r.Id = {0}</value>
+    <comment>Filtro por id</comment>
+  </data>
+  <data name="FiltroObtenerRenovacionIdMarca" xml:space="preserve">
+    <value>marca.Id = {0}</value>
+    <comment>Filtro por marca</comment>
+  </data>
+  <data name="CabeceraObtenerMarcaTercero" xml:space="preserve">
+    <value>Select m from MarcaTercero m left join fetch m.Asociado as asociado left join fetch m.Interesado as interesado where </value>
+    <comment>Cabecera del query para el filtro de marcaTercero</comment>
+  </data>
+  <data name="FiltroObtenerMarcaTerceroAsociadoId" xml:space="preserve">
+    <value>asociado.Id = {0}</value>
+    <comment>filtro por asociado</comment>
+  </data>
+  <data name="FiltroObtenerMarcaTerceroFechas" xml:space="preserve">
+    <value>m.FechaPublicacion between '{0}' and '{1}'</value>
+    <comment>Filtro por Fechas</comment>
+  </data>
+  <data name="FiltroObtenerMarcaTerceroFichas" xml:space="preserve">
+    <value>upper(m.Fichas) like '%{0}%'</value>
+    <comment>Filtro por fichas</comment>
+  </data>
+  <data name="FiltroObtenerMarcaTerceroId" xml:space="preserve">
+    <value>m.Id like '%{0}%'</value>
+    <comment>filtro por id</comment>
+  </data>
+  <data name="FiltroObtenerMarcaTerceroInteresadoId" xml:space="preserve">
+    <value>interesado.Id = {0}</value>
+    <comment>Filtro por interesado</comment>
+  </data>
+  <data name="CabeceraObtenerOperacion" xml:space="preserve">
+    <value>Select o from Operacion o left join fetch o.Interesado as interesado left join fetch o.Asociado as asociado left join fetch o.Boletin as boletin left join fetch o.Servicio as servicio where </value>
+    <comment>Cabecera del query para el filtro de operacion</comment>
+  </data>
+  <data name="FiltroObtenerOperacionFecha" xml:space="preserve">
+    <value>o.Fecha between '{0}' and '{1}'</value>
+    <comment>Filtro por Fecha</comment>
+  </data>
+  <data name="FiltroObtenerOperacionId" xml:space="preserve">
+    <value>o.Id = {0}</value>
+    <comment>Filtro por Id</comment>
+  </data>
+  <data name="FiltroObtenerOperacionIdMarca" xml:space="preserve">
+    <value>o.CodigoAplicada = {0}</value>
+    <comment>Filtro por Marca</comment>
+  </data>
+  <data name="FiltroObtenerOperacionMarca" xml:space="preserve">
+    <value>o.Aplicada = '{0}'</value>
+    <comment>Filtro por Aplicada</comment>
+  </data>
+  <data name="FiltroObtenerOperacionServicio" xml:space="preserve">
+    <value>servicio.Id = '{0}'</value>
+    <comment>Filtro por Servicio</comment>
+  </data>
+  <data name="CabeceraObtenerMarcaBaseTercero" xml:space="preserve">
+    <value>Select m from MarcaBaseTercero m left join fetch m.MarcaTercero as mt where mt.Id= '{0}' and mt.Anexo = {1}</value>
+  </data>
+  <data name="FiltroObtenerMarcaBaseTerceroId" xml:space="preserve">
+    <value>m.Id = {0}</value>
+  </data>
+  <data name="FiltroObtenerMarcaRecordatorio" xml:space="preserve">
+    <value>m.Recordatorio = {0}</value>
+    <comment>Filtro marca por recordatorio</comment>
+  </data>
+  <data name="CabeceraObtenerAgenteDesinflados" xml:space="preserve">
+    <value>Select distinct(a) from Agente a where </value>
+    <comment>Cabecera del query para el filtro de agentes</comment>
+  </data>
+  <data name="ObtenerResolucionesPorBoletin" xml:space="preserve">
+    <value>Select r from Resolucion r where r.Boletin.Id = {0}</value>
+    <comment>Selecciona las resoluciones de un boletin</comment>
+  </data>
+  <data name="ObtenerInternacionalPorId" xml:space="preserve">
+    <value>Select i from Internacional i where i.Id = {0}</value>
+    <comment>Selecciona un internacional por Id</comment>
+  </data>
+  <data name="ObtenerMaxIdMarcaTercero" xml:space="preserve">
+    <value>select max(m.Id) from MarcaTercero m where m.Id like '{0}-%'</value>
+    <comment>Selecciona el ultimo insert de MarcaTercero del parametro dado</comment>
+  </data>
+  <data name="ObtenerMaxAnexoMarcaTercero" xml:space="preserve">
+    <value>select max(m.Anexo) from MarcaTercero m where m.Id = '{0}'</value>
+    <comment>Obtiene el ultimo anexo insertado de un marca Tercero</comment>
+  </data>
+  <data name="ObtenerMaxSecuenciaMarcaBaseTercero" xml:space="preserve">
+    <value>select max(m.Secuencia) from MarcaBaseTercero m</value>
+    <comment>Obtiene la Ultima Secuencia de marcaBaseTercero</comment>
+  </data>
+  <data name="ObtenerTodosMarcaBaseTerceroPorId" xml:space="preserve">
+    <value>select m from MarcaBaseTercero m left join fetch m.MarcaTercero as mt where mt.Id like '{0}' and mt.Anexo = {1}</value>
+    <comment>Selecciona las MarcaBaseTercero por Id y Anexo</comment>
+  </data>
+  <data name="FiltroObtenerMarcaFechaRenovacion" xml:space="preserve">
+    <value>m.FechaRenovacion between '{0}' and '{1}'</value>
+  </data>
+  <data name="FiltroObtenerMarcaBoletinConcesion" xml:space="preserve">
+    <value>m.BoletinConcesion.Id = '{0}'</value>
+    <comment>Filtro por Boletin Concesión</comment>
+  </data>
+  <data name="FiltroObtenerMarcaBoletinPublicacion" xml:space="preserve">
+    <value>m.BoletinPublicacion.Id = '{0}'</value>
+    <comment>Filtro por Boletin Publicación</comment>
+  </data>
+  <data name="FiltroObtenerMarcaInternacional" xml:space="preserve">
+    <value>m.Internacional.Id = {0}</value>
+    <comment>Filtro por Id de clase internacional</comment>
+  </data>
+  <data name="FiltroObtenerMarcaNacional" xml:space="preserve">
+    <value>m.Nacional.Id = {0}</value>
+    <comment>Filtro por Id de clase nacional</comment>
+  </data>
+  <data name="CabeceraObtenerPatente" xml:space="preserve">
+    <value>Select p from Patente p left join fetch p.Asociado as asociado left join fetch p.Interesado as interesado left join fetch asociado.Pais as pais left join fetch asociado.Idioma as pais left join fetch p.BoletinConcesion as boletinC left join fetch p.BoletinPublicacion as boletinP left join fetch p.BoletinOrdenPublicacion as boletinO left join fetch p.Anualidades as anualidades left join fetch p.Agente as agente left join fetch p.TipoEstado as tipoEstado left join fetch p.Servicio as servicio left join fetch p.StatusWeb as statusWeb where </value>
+    <comment>Cabecera del query para el filtro de Patentes</comment>
+  </data>
+  <data name="FiltroObtenerPatenteDescripcion" xml:space="preserve">
+    <value>upper(p.Descripcion) like '%{0}%'</value>
+    <comment>Filtro por Descripción de Patente</comment>
+  </data>
+  <data name="FiltroObtenerPatenteFecha" xml:space="preserve">
+    <value>p.FechaPublicacion between '{0}' and '{1}'</value>
+    <comment>Filro por fecha Publicación</comment>
+  </data>
+  <data name="FiltroObtenerPatenteId" xml:space="preserve">
+    <value>p.Id = {0}</value>
+    <comment>Filtro por Id</comment>
+  </data>
+  <data name="FiltroObtenerPatenteIdAsociado" xml:space="preserve">
+    <value>asociado.Id ={0}</value>
+    <comment>Filtro por Asociado</comment>
+  </data>
+  <data name="FiltroObtenerPatenteIdInteresado" xml:space="preserve">
+    <value>interesado.Id = {0}</value>
+    <comment>Filtro por Interesado</comment>
+  </data>
+  <data name="CabeceraObtenerLicenciaPatente" xml:space="preserve">
+    <value>Select l from LicenciaPatente l left join fetch l.Patente as patente left join fetch l.AgenteLicenciatario as Alicentario left join fetch l.AgenteLicenciante as Alice left join fetch l.Asociado as asosia left join fetch l.Boletin as boletin left join fetch l.InteresadoLicenciatario as InterLicen left join fetch l.InteresadoLicenciante left join fetch l.PoderLicenciatario as Plicentario left join fetch l.PoderLicenciante as Plicenciant  where </value>
+    <comment>Cabecera para armar el objeto de LicenciaPatente</comment>
+  </data>
+  <data name="FiltroObtenerLicenciaIdPatente" xml:space="preserve">
+    <value>patente.Id = {0}</value>
+    <comment>Filtra por una licencia por patente</comment>
+  </data>
+  <data name="CabeceraObtenerFusionPatente" xml:space="preserve">
+    <value>Select f from FusionPatente f left join fetch f.Patente as patente left join fetch f.InteresadoEntre as interesadoEntre left join fetch f.InteresadoSobreviviente as interesadoSobreviviente left join fetch f.Agente as agente left join fetch f.Poder as poder where </value>
+  </data>
+  <data name="FiltroObtenerFusionIdPatente" xml:space="preserve">
+    <value>patente.Id = {0}</value>
+    <comment>Filtro de Fusion por id de patente</comment>
+  </data>
+  <data name="CabeceraObtenerCesionPatente" xml:space="preserve">
+    <value>Select c from CesionPatente c left join fetch c.Patente as patente left join fetch c.Cedente as cedente left join fetch c.AgenteCedente as agenteCed left join fetch c.AgenteCesionario as agenteCes left join fetch c.PoderCedente as PoderCed  left join fetch c.PoderCesionario as PoderCes left join fetch c.Cedente as interesadoCed left join fetch c.Cesionario as interesadoCes left join fetch c.BoletinPublicacion as boletin where </value>
+    <comment>Cabecera de CesionPatente</comment>
+  </data>
+  <data name="FiltroObtenerCesiondPatente" xml:space="preserve">
+    <value>patente.Id = {0}</value>
+    <comment>obtener filtro por id de patente</comment>
+  </data>
+  <data name="CabeceraObtenerCambioDeDomicilioPatente" xml:space="preserve">
+    <value>Select c from CambioDeDomicilioPatente c left join fetch c.Patente as patente left join fetch c.InteresadoActual as interesadoActual left join fetch c.InteresadoAnterior as interesadoAnterior left join fetch c.Agente as agente  left join fetch c.Poder as poder where </value>
+    <comment>Cabecera del query para el filtro de cambio de domicilio</comment>
+  </data>
+  <data name="FiltroObtenerCambioDeDomicilioPatenteFecha" xml:space="preserve">
+    <value>c.FechaPublicacion between '{0}' and '{1}'</value>
+    <comment>filtro por fecha</comment>
+  </data>
+  <data name="FiltroObtenerCambioDeDomicilioPatenteId" xml:space="preserve">
+    <value>c.Id = {0}</value>
+    <comment>Filtro por Id</comment>
+  </data>
+  <data name="FiltroObtenerCambioDeDomicilioPatenteIdPatente" xml:space="preserve">
+    <value>patente.Id = {0}</value>
+    <comment>Filtro por Patente</comment>
+  </data>
+  <data name="ObtenerPatenteConTodo" xml:space="preserve">
+    <value>Select p from Patente p left join fetch p.Asociado as asociado left join fetch p.Servicio as servicio left join fetch p.Inventores as inventores left join fetch p.Agente as agente left join fetch p.Interesado as interesado left join fetch interesado.Pais as pais left join fetch interesado.Nacionalidad as nacionalidad where p.Id = {0} order by p.Id</value>
+  </data>
+  <data name="CabeceraObtenerCambioDeNombrePatente" xml:space="preserve">
+    <value>Select c from CambioDeNombrePatente c left join fetch c.Patente as patente left join fetch c.InteresadoActual as interesadoActual left join fetch c.InteresadoAnterior as interesadoAnterior left join fetch c.Agente as agente left join fetch c.Poder as poder where </value>
+    <comment>Cabecera del filtro para Cambio De Nombre Patente</comment>
+  </data>
+  <data name="FiltroObtenerCambioDeNombrePatenetIdPatente" xml:space="preserve">
+    <value>patente.Id = {0}</value>
+    <comment>Filtro por patente</comment>
+  </data>
+  <data name="FiltroObtenerCambioDeNombrePatenteFecha" xml:space="preserve">
+    <value>c.Fecha between '{0}' and '{1}'</value>
+    <comment>Filtro por Fecha</comment>
+  </data>
+  <data name="FiltroObtenerCambioDeNombrePatenteId" xml:space="preserve">
+    <value>c.Id = {0}</value>
+    <comment>Filtro por Id</comment>
+  </data>
+  <data name="CabeceraObtenerCambioPeticionarioPatente" xml:space="preserve">
+    <value>Select c from CambioPeticionarioPatente c left join fetch c.Patente as patente left join fetch c.InteresadoAnterior as anterior left join fetch c.AgenteAnterior as agenteAnt left join fetch c.AgenteActual as agenteAct left join fetch c.PoderAnterior as PoderAnt  left join fetch c.PoderActual as PoderAct left join fetch c.InteresadoAnterior as interesadoAnt left join fetch c.InteresadoActual as interesadoAct left join fetch c.BoletinPublicacion as boletin where </value>
+    <comment>Cabecera del query para el filtro de peticionario patente</comment>
+  </data>
+  <data name="FiltroObtenerCambioPeticionarioPatenteFecha" xml:space="preserve">
+    <value>c.Fecha between '{0}' and '{1}'</value>
+    <comment>filtro por fecha</comment>
+  </data>
+  <data name="FiltroObtenerCambioPeticionarioPatenteId" xml:space="preserve">
+    <value>c.Id = {0}</value>
+    <comment>filtro por Id</comment>
+  </data>
+  <data name="FiltroObtenerCambioPeticionarioPatenteIdPatente" xml:space="preserve">
+    <value>patente.Id = {0}</value>
+    <comment>filtro por patente</comment>
+  </data>
+  <data name="ObtenerInventoresPorPatente" xml:space="preserve">
+    <value>Select i from Inventor i where i.Patente.id = '{0}'</value>
+    <comment>Selecciona todos los inventores de uina patente</comment>
+  </data>
+  <data name="FiltroObtenerOperacionIdPatente" xml:space="preserve">
+    <value>o.CodigoAplicada = {0}</value>
+    <comment>Filtro por Patente</comment>
+  </data>
+  <data name="CabeceraObtenerAnualidad" xml:space="preserve">
+    <value>Select a from Anualidad a left join fetch a.Patente as patente left join fetch a.Asociado as asociado where </value>
+    <comment>Crea la cabecera de anualidades</comment>
+  </data>
+  <data name="FiltroObtenerAnualidadId" xml:space="preserve">
+    <value>patente.Id = {0}</value>
+    <comment>Filtra la anualidad por id</comment>
+  </data>
+  <data name="ObtenerAnualidadConTodo" xml:space="preserve">
+    <value>Select a from Anualidad a left join fetch a.Patente as patente left join fetch a.Asociado as asociado where patente.Id = {0}</value>
+    <comment>consulta todas las pantentes con el id determinado</comment>
+  </data>
+  <data name="CabeceraObtenerAnualidadPorIdPatente" xml:space="preserve">
+    <value>Select a from Anualidad a left join fetch a.Patente as patente left join fetch a.Asociado as asociado where patente.Id = {0}</value>
+    <comment>Se obtiene la anualidad de una patente</comment>
+  </data>
+  <data name="ObtenerOperacionesPorPatentes" xml:space="preserve">
+    <value>Select o from Operacion o where o.CodigoAplicada = {0} and o.Aplicada = 'P'</value>
+  </data>
+  <data name="ObtenerMaxAnualidad" xml:space="preserve">
+    <value>select max(a.Id) from Anualidad a</value>
+    <comment>Obtiene el maximo Id Insertado en BD</comment>
+  </data>
+  <data name="ObtenerInfoBolesPorPatente" xml:space="preserve">
+    <value>Select i from InfoBolPatente i left outer join fetch i.TipoInfobol where i.Patente.Id = '{0}'</value>
+    <comment>Obtener todos los infoboles de una patente</comment>
+  </data>
+  <data name="ObtenerFechaPatente" xml:space="preserve">
+    <value>Select f from Fecha f left outer join fetch f.Tipo as tipoFecha left outer join fetch f.Correspondencia as carta left outer join fetch carta.Resumen as resumen left outer join fetch f.Patente as patente where f.Patente.Id = {0}</value>
+    <comment>Selecciona las fechas de una patente</comment>
+  </data>
+  <data name="ObtenerMemoriasPorPatente" xml:space="preserve">
+    <value>Select m from Memoria m where m.Patente.Id = '{0}'</value>
+    <comment>Selecciona todas los poderes que posee un interesado</comment>
+  </data>
+  <data name="ObtenerUltimaRenovacion" xml:space="preserve">
+    <value>select max(r.Id) from Renovacion r where r.Marca= '{0}'</value>
+    <comment>Consulta la ultima renovacion de una marca</comment>
+  </data>
+  <data name="CabeceraObtenerAgenteVacio" xml:space="preserve">
+    <value>Select distinct(a) from Agente a where </value>
+    <comment>Cabecera del query para el filtro de agentes</comment>
+  </data>
+  <data name="CabeceraObtenerAnualidadesPorPatente" xml:space="preserve">
+    <value>Select a from Anualidad a left join fetch a.Patente as patente left join fetch a.Asociado as asociado where patente.Id = {0}</value>
+    <comment>Selecciona todas las anualidades de una patente</comment>
+  </data>
+  <data name="FiltroObtenerPatenteBoletinConcesion" xml:space="preserve">
+    <value>p.BoletinConcesion.Id = '{0}'</value>
+    <comment>Filtro por Boletin Concesión</comment>
+  </data>
+  <data name="FiltroObtenerPatenteBoletinOrdenPublicacion" xml:space="preserve">
+    <value>p.BoletinOrdenPublicacion.Id = '{0}'</value>
+    <comment>Filtro por Boletin Orden Publicación</comment>
+  </data>
+  <data name="FiltroObtenerPatenteBoletinPublicacion" xml:space="preserve">
+    <value>p.BoletinPublicacion.Id = '{0}'</value>
+    <comment>Filtro por Boletin Publicación</comment>
+  </data>
+  <data name="FiltroObtenerPatenteServicio" xml:space="preserve">
+    <value>p.Servicio.Id = '{0}'</value>
+    <comment>Filtro por Servicio</comment>
+  </data>
+  <data name="FiltroObtenerPatenteTipoEstado" xml:space="preserve">
+    <value>p.TipoEstado.Id = '{0}'</value>
+    <comment>Filtro por Tipo Estado</comment>
+  </data>
+  <data name="FiltroObtenerPatenteCodigoPrioridad" xml:space="preserve">
+    <value>p.CPrioridad like '%{0}%'</value>
+    <comment>Filtro por Código de Prioridad</comment>
+  </data>
+  <data name="FiltroObtenerPatenteFechaPrioridad" xml:space="preserve">
+    <value>p.FechaPrioridad between '{0}' and '{1}'</value>
+    <comment>Filro por fecha Prioridad</comment>
+  </data>
+  <data name="FiltroObtenerPatentePaisPrioridad" xml:space="preserve">
+    <value>p.Pais.Id = '{0}'</value>
+    <comment>Filtro por País prioridad</comment>
+  </data>
+  <data name="FiltroObtenerPatenteSolicitud" xml:space="preserve">
+    <value>p.CodigoInscripcion like '%{0}%'</value>
+    <comment>Filtro por solicitud</comment>
+  </data>
+  <data name="ObtenerPoderesEntreAgenteEInteresado" xml:space="preserve">
+    <value>Select p from Poder p where </value>
+  </data>
+  <data name="FiltroObtenerMarcaBoletinOrdenPub" xml:space="preserve">
+    <value>m.BoletinOrdenPublicacion.Id = '{0}'</value>
+    <comment>Filtra marca por Boletin orden Pub</comment>
+  </data>
+  <data name="FiltroObtenerMarcaCorresponsal" xml:space="preserve">
+    <value>m.Corresponsal.Id = {0}</value>
+    <comment>Filtra marca por Corresponsal</comment>
+  </data>
+  <data name="FiltroObtenerMarcaDistingue" xml:space="preserve">
+    <value>upper(m.Distingue) like '%{0}%'</value>
+    <comment>Filtra marca por distingue</comment>
+  </data>
+  <data name="FiltroObtenerMarcaFechaPrioridad" xml:space="preserve">
+    <value>m.FechaPrioridad between '{0}' and '{1}'</value>
+    <comment>Filtra marca por fecha Prioridad</comment>
+  </data>
+  <data name="FiltroObtenerMarcaFechaRegistro" xml:space="preserve">
+    <value>m.FechaRegistro between '{0}' and '{1}'</value>
+    <comment>Filtra marca por fecha Registro</comment>
+  </data>
+  <data name="FiltroObtenerMarcaPais" xml:space="preserve">
+    <value>m.Pais.Id = {0}</value>
+    <comment>Filtra marca por pais prioridad</comment>
+  </data>
+  <data name="FiltroObtenerMarcaPrioridad" xml:space="preserve">
+    <value>m.CPrioridad = {0}</value>
+    <comment>Filtra marca por prioridad</comment>
+  </data>
+  <data name="FiltroObtenerMarcaRegistro" xml:space="preserve">
+    <value>upper(m.CodigoRegistro) like '%{0}%'</value>
+    <comment>Filtra marca por Registro</comment>
+  </data>
+  <data name="FiltroObtenerMarcaServicio" xml:space="preserve">
+    <value>m.Servicio.Id = '{0}'</value>
+    <comment>Filtra marca por servicio las marcas</comment>
+  </data>
+  <data name="FiltroObtenerMarcaSolicitud" xml:space="preserve">
+    <value>m.CodigoInscripcion like '%{0}%'</value>
+    <comment>Filtra marca por la solicitud</comment>
+  </data>
+  <data name="FiltroObtenerMarcaTipoEstado" xml:space="preserve">
+    <value>m.TipoEstado.Id = {0}</value>
+    <comment>Filtra marca por tipo de estad</comment>
+  </data>
+  <data name="FiltroObtenerCartaReferencia" xml:space="preserve">
+    <value>upper(c.Referencia) like '%{0}%'</value>
+    <comment>Filtro por Id</comment>
+  </data>
+  <data name="VerificarCartasPorAsociado" xml:space="preserve">
+    <value>Select count(*) from Carta c where c.Asociado.Id = {0}</value>
+    <comment>Verifica la existencia de cartas de un asociado</comment>
+  </data>
+  <data name="FiltroObtenerMarcaInstruccionesRenovacion" xml:space="preserve">
+    <value>m.Rev = '{0}'</value>
+    <comment>Filtro por Intrucción de renovación</comment>
+  </data>
+  <data name="FiltroObtenerMarcaNumeroCondiciones" xml:space="preserve">
+    <value>m.NumeroCondiciones = {0}</value>
+    <comment>Filtro por número de condiciones</comment>
+  </data>
+  <data name="FiltroObtenerMarcaRenovacionOtroTramitante" xml:space="preserve">
+    <value>m.Ter = '{0}'</value>
+    <comment>Filtro por renovación otro tramitante</comment>
+  </data>
+  <data name="CabeceraObtenerMarcaRecordatorio" xml:space="preserve">
+    <value>Select distinct(m.Id) from Marca m left join fetch m.Asociado as asociado left join fetch m.Agente as agente left join fetch m.Corresponsal as corresponsal left join fetch m.Interesado as interesado left join fetch asociado.Pais as pais left join fetch asociado.Idioma as idioma  where </value>
+    <comment>Cabecera para los recordatorio de marca</comment>
+  </data>
+  <data name="FiltroObtenerMarcaEstadoMarca" xml:space="preserve">
+    <value>m.EstadoMarca = '{0}'</value>
+    <comment>Filtra Marca por estado de la Marca</comment>
+  </data>
+  <data name="FiltroObtenerMarcaTerceroSolicitud" xml:space="preserve">
+    <value>m.CodigoInscripcion = '{0}'</value>
+    <comment>Filtra Marca a tercero por numero de solicitud</comment>
+  </data>
+  <data name="FiltroObtenerMarcaTipoDeCaso" xml:space="preserve">
+    <value>m.CasoT = '{0}'</value>
+    <comment>Filtra Marca Tercero por tipo de caso</comment>
+  </data>
+  <data name="FiltroObtenerRenovacionIdInteresado" xml:space="preserve">
+    <value>interesado.Id = {0}</value>
+    <comment>Filtro por Interesado</comment>
+  </data>
+  <data name="ObtenerInfoBolesMarcaTerPorMarcas" xml:space="preserve">
+    <value>Select i from InfoBolMarcaTer i left outer  join fetch i.TipoInfobol where i.Marca.Id = '{0}' and i.Marca.Anexo = {1}</value>
+    <comment>Obtiene los Infoboles de marcaTercero</comment>
+  </data>
+  <data name="CabeceraObtenerRecordatorioVista" xml:space="preserve">
+    <value>Select r from RecordatorioVista r left join fetch r.Asociado as asociado left join fetch r.Marca as marca left join fetch asociado.Pais as pais left join fetch marca.Nacional as nacional where </value>
+    <comment>Cabecera del query para el filtro de recordatorioVista</comment>
+  </data>
+  <data name="FiltroObtenerRecordatorioVistaFechaRenovacion" xml:space="preserve">
+    <value>marca.FechaRenovacion between '{0}' and '{1}'</value>
+    <comment>filtro por fecha</comment>
+  </data>
+  <data name="FiltroObtenerRecordatorioVistaMarcaRecordatorio" xml:space="preserve">
+    <value>marca.Recordatorio = {0}</value>
+    <comment>filtro por recordatorio</comment>
+  </data>
+  <data name="ObtenerAuditoriaPorFKYTablaMarcaTer" xml:space="preserve">
+    <value>Select a from Auditoria a where a.Fks = '{0}' and a.Tabla = '{1}' and a.Fk = '{2}' ORDER BY a.Fecha DESC</value>
+    <comment>Obtiene las auditorias de una marcaTercero</comment>
+  </data>
+  <data name="ObtenerAsignacionesPorUsuario" xml:space="preserve">
+    <value>Select a from Asignacion a where a.Iniciales= '{0}'</value>
+  </data>
+  <data name="FiltroObtenerAsociadoDetallePago" xml:space="preserve">
+    <value>detallePago.Id = '{0}'</value>
+    <comment>Filtro por DetallePago</comment>
+  </data>
+  <data name="FiltroObtenerAsociadoDomicilio" xml:space="preserve">
+    <value>a.Domicilio = '{0}'</value>
+    <comment>Filtro por domicilio</comment>
+  </data>
+  <data name="FiltroObtenerAsociadoEtiqueta" xml:space="preserve">
+    <value>etiqueta.Id = {0}</value>
+    <comment>Filtro por Etiqueta</comment>
+  </data>
+  <data name="FiltroObtenerAsociadoIdioma" xml:space="preserve">
+    <value>idioma.Id = '{0}'</value>
+    <comment>Filtro por Idioma</comment>
+  </data>
+  <data name="FiltroObtenerAsociadoMoneda" xml:space="preserve">
+    <value>moneda.Id = '{0}'</value>
+    <comment>Filtro por moneda</comment>
+  </data>
+  <data name="FiltroObtenerAsociadoPais" xml:space="preserve">
+    <value>pais.Id = {0}</value>
+    <comment>Filtro por Pais</comment>
+  </data>
+  <data name="FiltroObtenerAsociadoTarifa" xml:space="preserve">
+    <value>tarifa.Id = {0}</value>
+    <comment>Filtro por tarifa</comment>
+  </data>
+  <data name="FiltroObtenerAsociadoTipoCliente" xml:space="preserve">
+    <value>tipoCliente.Id = {0}</value>
+    <comment>Filtro por TipoCliente</comment>
+  </data>
+  <data name="FiltroObtenerAsociadoTipoPersona" xml:space="preserve">
+    <value>a.TipoPersona = '{0}'</value>
+    <comment>Filtro por TipoPersona</comment>
+  </data>
+  <data name="FiltroObtenerRecordatorioVistaAno" xml:space="preserve">
+    <value>to_char(marca.FechaRenovacion,'YYYY') like '{0}'</value>
+    <comment>Filtro por Año</comment>
+  </data>
+  <data name="FiltroObtenerInteresadoAlerta" xml:space="preserve">
+    <value>i.Alerta = '{0}'</value>
+    <comment>Filtro por Alerta</comment>
+  </data>
+  <data name="FiltroObtenerInteresadoCi" xml:space="preserve">
+    <value>i.Ci = '{0}'</value>
+    <comment>Filtro por CI</comment>
+  </data>
+  <data name="FiltroObtenerInteresadoCiudad" xml:space="preserve">
+    <value>i.Ciudad = '{0}'</value>
+    <comment>Filtro por ciudad</comment>
+  </data>
+  <data name="FiltroObtenerInteresadoCorporacion" xml:space="preserve">
+    <value>corporacion.Id = '{0}'</value>
+    <comment>Filtro por Corporación</comment>
+  </data>
+  <data name="FiltroObtenerInteresadoDomicilio" xml:space="preserve">
+    <value>i.Domicilio = '{0}'</value>
+    <comment>Filtro por Domicilio</comment>
+  </data>
+  <data name="FiltroObtenerInteresadoEstado" xml:space="preserve">
+    <value>i.Estado = '{0}'</value>
+    <comment>Filtro por Estado</comment>
+  </data>
+  <data name="FiltroObtenerInteresadoNacionalidad" xml:space="preserve">
+    <value>pais.Nacionalidad ='{0}'</value>
+    <comment>Filtro por Nacionalidad</comment>
+  </data>
+  <data name="FiltroObtenerInteresadoPais" xml:space="preserve">
+    <value>pais.Id = {0}</value>
+    <comment>Filtro por Pais</comment>
+  </data>
+  <data name="FiltroObtenerInteresadoRegMercantil" xml:space="preserve">
+    <value>i.RegMercantil = '{0}'</value>
+    <comment>Filtro por RegMercantil</comment>
+  </data>
+  <data name="FiltroObtenerInteresadoTipoPersona" xml:space="preserve">
+    <value>i.TipoPersona = '{0}'</value>
+    <comment>Filtro por TipoPersona</comment>
+  </data>
+  <data name="FiltroObtenerRecordatorioVistaMes" xml:space="preserve">
+    <value>to_char(marca.FechaRenovacion,'MM') like '{0}'</value>
+    <comment>Filtro por Mes</comment>
+  </data>
+  <data name="FiltroObtenerMarcaReferencia" xml:space="preserve">
+    <value>m.PrimeraReferencia like '%{0}%'</value>
+  </data>
+  <data name="FiltroObtenerPatenteReferencia" xml:space="preserve">
+    <value>p.PrimeraReferencia like '%{0}%'</value>
+  </data>
+  <data name="EliminarAsignacionesPorCarta" xml:space="preserve">
+    <value>Delete from Asignacion where Carta.Id ={0}</value>
+  </data>
+  <data name="FiltroObtenerPoderPorAnexo" xml:space="preserve">
+    <value>p.Anexo='{0}'</value>
+  </data>
+  <data name="FiltroObtenerPoderPorBoletin" xml:space="preserve">
+    <value>p.Boletin.Id = {0}</value>
+  </data>
+  <data name="FiltroObtenerPoderPorFacultad" xml:space="preserve">
+    <value>p.Facultad ='{0}'</value>
+  </data>
+  <data name="FiltroObtenerPoderPorInteresado" xml:space="preserve">
+    <value>p.Interesado.Id={0}</value>
+  </data>
+  <data name="FiltroObtenerPoderPorNumPoder" xml:space="preserve">
+    <value>p.NumPoder = '{0}'</value>
+  </data>
+  <data name="FiltroObtenerPoderPorObservacion" xml:space="preserve">
+    <value>p.Observacion='{0}'</value>
+  </data>
+  <data name="ObtenerInstruccionesDeRenovacionPorMarca" xml:space="preserve">
+    <value>Select i from InstruccionDeRenovacion i where i.Marca.Id = '{0}'</value>
+    <comment>Obtiene las busquedas que pertenecen a una marca determinada</comment>
+  </data>
+  <data name="ObtenerFusionMarcaTercero" xml:space="preserve">
+    <value>Select m from FusionMarcaTercero m where m.Fusion.Id = {0}</value>
+  </data>
+  <data name="ObtenerFusionPatenteTercero" xml:space="preserve">
+    <value>Select m from FusionPatenteTercero m where m.Fusion.Id = {0}</value>
+  </data>
+  <data name="FiltroObtenerMarcaIntIdCorrelativoExp" xml:space="preserve">
+    <value>m.CorrelativoExpediente = {0}</value>
+  </data>
+  <data name="FiltroObtenerMarcaIntIdInternacional" xml:space="preserve">
+    <value>m.CodigoMarcaInternacional = {0}</value>
+  </data>
+  <data name="FiltroObtenerMarcaPaisInternacional" xml:space="preserve">
+    <value>m.PaisInternacional.Id ={0}</value>
+  </data>
+  <data name="FiltroObtenerMarcaReferenciaAsociadoInternacional" xml:space="preserve">
+    <value>upper(m.ReferenciaAsociadoInternacional) like '%{0}%'</value>
+    <comment>Filtra marca por referencia de asociado internacional</comment>
+  </data>
+  <data name="FiltroObtenerMarcaReferenciaInteresadoInternacional" xml:space="preserve">
+    <value>upper(m.ReferenciaInteresadoInternacional) like '%{0}%'</value>
+    <comment>Filtra marca por referencia de asociado internacional</comment>
+  </data>
+  <data name="FiltroObtenerMarcaLocalidad" xml:space="preserve">
+    <value>m.LocalidadMarca = '{0}'</value>
+  </data>
+  <data name="FiltroObtenerPatenteIntIdCorrelativoExp" xml:space="preserve">
+    <value>p.CorrelativoExpediente = {0}</value>
+  </data>
+  <data name="FiltroObtenerPatenteIntIdInternacional" xml:space="preserve">
+    <value>p.CodigoPatenteInternacional = {0}</value>
+  </data>
+  <data name="FiltroObtenerPatenteLocalidad" xml:space="preserve">
+    <value>p.LocalidadPatente = '{0}'</value>
+  </data>
+  <data name="FiltroObtenerPatentePaisInternacional" xml:space="preserve">
+    <value>p.PaisInternacional.Id ={0}</value>
+  </data>
+  <data name="FiltroObtenerPatenteReferenciaAsociadoInternacional" xml:space="preserve">
+    <value>upper(p.ReferenciaAsociadoInternacional) like upper('%{0}%')</value>
+    <comment>Filtra marca por referencia de asociado internacional</comment>
+  </data>
+  <data name="FiltroObtenerPatenteReferenciaInteresadoInternacional" xml:space="preserve">
+    <value>upper(p.ReferenciaInteresadoInternacional) like upper('%{0}%')</value>
+    <comment>Filtra marca por referencia de asociado internacional</comment>
+  </data>
+  <data name="EliminarReportePatentePorCodigoPatente" xml:space="preserve">
+    <value>Delete from ReportePatente where CodigoPatente = {0}</value>
+  </data>
+  <data name="ObtenerReportePatentePorCodigoPatente" xml:space="preserve">
+    <value>Select p from ReportePatente p where p.CodigoPatente = {0}</value>
+  </data>
+  <data name="ObtenerContactosPorAsociadoVista" xml:space="preserve">
+    <value>Select c from ContactosDelAsociadoVista c where c.Id like '{0}-%'</value>
+  </data>
+  <data name="ObtenerContactoPorId" xml:space="preserve">
+    <value>Select c from Contacto c where c.Id = {0} and c.Asociado.Id = {1}</value>
+  </data>
+  <data name="CabeceraObtenerContacto" xml:space="preserve">
+    <value>Select c from Contacto c left outer join fetch c.Asociado where </value>
+    <comment>Cabecera del query para el filtro de cartas</comment>
+  </data>
+  <data name="FiltroCorreoContacto" xml:space="preserve">
+    <value>upper(c.Email) like '%{0}%'</value>
+  </data>
+  <data name="FiltroIdContacto" xml:space="preserve">
+    <value>c.Id = '{0}'</value>
+  </data>
+  <data name="FiltroObtenerCartaAnexoTracking" xml:space="preserve">
+    <value>upper(c.Anexo)Tracking like '%{0}%'</value>
+  </data>
+  <data name="FiltroObtenerCartaIdDepartamento" xml:space="preserve">
+    <value>c.Departamento.Id = '{0}'</value>
+  </data>
+  <data name="FiltroObtenerCartaMedio" xml:space="preserve">
+    <value>c.Medio = '{0}'</value>
+    <comment>Filtro por Id</comment>
+  </data>
+  <data name="FiltroObtenerCartaTracking" xml:space="preserve">
+    <value>upper(c.Tracking) like '%{0}%'</value>
+  </data>
+  <data name="FiltroObtenerCartaNombreContacto" xml:space="preserve">
+    <value>c.NombreContacto like '%{0}%'</value>
+  </data>
+  <data name="FiltroObtenerCartaFechaAnexo" xml:space="preserve">
+    <value>c.AnexoFecha between '{0}' and '{1}'</value>
+  </data>
+  <data name="FiltroAsociadoContacto" xml:space="preserve">
+    <value>c.Asociado.Id = {0}</value>
+  </data>
+  <data name="FiltroDepartamentoContacto" xml:space="preserve">
+    <value>upper(c.Departamento) like '%{0}%'</value>
+  </data>
+  <data name="FiltroFaxContacto" xml:space="preserve">
+    <value>upper(c.Fax) like '%{0}%'</value>
+  </data>
+  <data name="FiltroNombreContacto" xml:space="preserve">
+    <value>upper(c.Nombre) like '%{0}%'</value>
+  </data>
+  <data name="FiltroTelefonoContacto" xml:space="preserve">
+    <value>upper(c.Telefono) like '%{0}%'</value>
+  </data>
+  <data name="ObtenerEmailsPorAsociado" xml:space="preserve">
+    <value>Select e from EmailAsociado e left outer join fetch e.Asociado left join fetch e.TipoEmailAsociado where e.Asociado.Id = {0}</value>
+  </data>
+</root>
