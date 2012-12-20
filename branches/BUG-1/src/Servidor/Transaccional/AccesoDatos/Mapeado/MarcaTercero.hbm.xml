@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Trascend.Bolet.ObjetosComunes"
+                   namespace="Trascend.Bolet.ObjetosComunes.Entidades"
+                   auto-import="true">
+
+  <class name="MarcaTercero" table="MYP_MARCAS_TER">
+
+    <!--<composite-id>
+      <key-property name="Id" column="CMARCAT"/>
+      <key-property name="Anexo" column="CANEXO"/>
+    </composite-id>-->
+    <!--<composite-id name="ClaveMarcaTercero" class =”MarcaTercero” unsaved-value=”none”>
+      <key-property name="Anexo" column="CANEXO" type="int"/>
+      <key-property  name="Descripcion" column="XMARCA" type="string"/>
+    </composite-id>-->
+    
+    
+    <composite-id>
+      <key-property name="Id" column="CMARCAT"/>
+      <key-property name="Anexo" column="CANEXO"/>
+    </composite-id>
+    
+    
+    <!--<id name="Anexo" column="CANEXO" type="int"/>
+    <property name="Id" column="CMARCAT" type="string"/>-->
+    <property name="Descripcion" column="XMARCA" type="string"/>
+    <property name="Tipo" column="ITIPO" type="string"/>
+    <property name="Prioridad" column="CPRIORIDAD" type="string"/>
+    <property name="AsociadoTercero" column="XASOCIADOT" type="string"/>
+    <property name="InteresadoTercero" column="XINTERESADOT" type="string"/>
+    <property name="TelefonoTercero" column="XTLFT" type="string"/>
+    <property name="FaxTercero" column="XFAXT" type="string"/>
+    <property name="DomicilioTercero" column="XDOMICILIOT" type="string"/>
+    <property name="ComentarioTercero" column="XCOMENTARIOT" type="string"/>
+    <property name="FechaPrioridad" column="FPRIORIDAD" type="DateTime"/>
+    <property name="PrimeraReferencia" column="XREFERENCIA1" type="string"/>
+    <property name="FechaInscripcion" column="FINSCRIPCION" type="DateTime"/>
+    <property name="CodigoInscripcion" column="CINSCRIPCION" type="string"/>
+    <property name="FechaPublicacion" column="FPUBLICACION" type="DateTime"/>
+    <property name="FechaConcesion" column="FCONCESION" type="DateTime"/>
+    <property name="CodigoRegistro" column="CREGISTRO" type="string"/>
+    <property name="FechaRegistro" column="FREGISTRO" type="DateTime"/>
+    <property name="Etiqueta" column="IETIQUETA" type="string"/>
+    <property name="Traduccion" column="ITRADUCCION" type="char"/>
+    <property name="Fichas" column="IFICHAS" type="string"/>
+    <property name="Registro" column="IREGISTRO" type="char"/>
+    <property name="Letra" column="XLETRA" type="string"/>
+    <property name="Acta" column="IACTA" type="char"/>
+    <property name="CodigoExpediente" column="CEXPEDIENTE" type="string"/>
+    <property name="Ubicacion" column="XUBICACION" type="string"/>
+    <property name="UbicacionRenovacion" column="XUBICACION_RENOVACION" type="string"/>
+    <property name="FechaRenovacion" column="FRENOVACION" type="DateTime"/>
+    <property name="EtiquetaDescripcion" column="XETIQUETA" type="string"/>
+    <property name="PrimerOtro" column="XOTROS1" type="string"/>
+    <property name="Representante" column="XREPRESENTANTE" type="string"/>
+    <property name="Observacion" column="XOBSERVACION" type="string"/>
+    <property name="Distingue" column="XDISTINGUE" type="string"/>
+    <property name="NumeroCondiciones" column="NCONDI" type="int"/>
+    <property name="Numero" column="NNUMERO" type="int"/>
+    <property name="Rev" column="IREV" type="char"/>
+    <property name="EstadoMarca" column="TESTADO" type="string"/>
+    <property name="CasoT" column="TCASO" type="string"/>
+    <property name="ComentarioEsp" column="XCOMENCLI_ESP" type="string"/>
+    <property name="ComentarioIng" column="XCOMENCLI_ING" type="string"/>
+
+    <many-to-one name="Agente" class="Agente">
+      <column name="CAGENTE"/>
+    </many-to-one>
+
+    <many-to-one name="Asociado" class="Asociado">
+      <column name="CASOCIADO"/>
+    </many-to-one>
+
+    <many-to-one name="BoletinConcesion" class="Boletin">
+      <column name="CBOLETIN_CONCESION"/>
+    </many-to-one>
+
+    <many-to-one name="BoletinPublicacion" class="Boletin">
+      <column name="CBOLETIN_PUBLICACION"/>
+    </many-to-one>
+
+    <many-to-one name="Internacional" class="Internacional">
+      <column name="CINTER"/>
+    </many-to-one>
+
+    <many-to-one name="Nacional" class="Nacional">
+      <column name="CNACIONAL"/>
+    </many-to-one>
+
+    <many-to-one name="Interesado" class="Interesado">
+      <column name="CINTERESADO"/>
+    </many-to-one>
+
+    <many-to-one name="Pais" class="Pais">
+      <column name="CPAIS_PRIORIDAD"/>
+    </many-to-one>
+
+    <many-to-one name="Poder" class="Poder" lazy="false">
+      <column name="CPODER"/>
+    </many-to-one>
+
+    <many-to-one name="Servicio" class="Servicio">
+      <column name="CSERVICIO"/>
+    </many-to-one>
+
+    <!--<bag name="MarcasBaseTercero">
+        <key column="CMARCAT"/>
+        <one-to-many class="MarcaBaseTercero"/>
+    </bag>-->
+
+
+    <!--<bag name="MarcasBaseTercero" table="MYP_MARCAS_BASE_TER" inverse="true" generic="true">
+      <key>
+        <column name="NSECU" />
+      </key>
+      <composite-element class="MarcaBaseTercero">
+        <many-to-one name="MarcaTercero" class="MarcaTercero" column="CMARCAT"/>
+      </composite-element>
+    </bag>-->
+
+
+    <!--<bag name="MarcasBaseTercero" table="MYP_MARCAS_BASE_TER">
+      <key column="NSECU"/>
+      <composite-element class="MarcaBaseTercero">
+        <many-to-one name="Id" class="MarcaBaseTercero" column="CMARCAT"/>
+        <many-to-one name="Anexo" class="MarcaBaseTercero" column="CANEXO"/>
+      </composite-element>
+    </bag>-->
+
+    <!--<bag name="MarcasBaseTercero" table="MYP_MARCAS_BASE_TER" >
+      <key column="CMARCAT"/>
+      <composite-element class="MarcasBaseTercero">
+        <many-to-one name="Anexo" column="CANEXO"/>
+      </composite-element>
+    </bag>-->
+
+  </class>
+
+
+</hibernate-mapping>
+
+

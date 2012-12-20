@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Trascend.Bolet.ObjetosComunes"
+                   namespace="Trascend.Bolet.ObjetosComunes.Entidades">
+  <class name="Carta" table="`ENTRADA`">
+    <id name="Id" column="CODIGO" type="int"/>
+    <property name="Acuse" type="char" column="`ACUSE`"/>
+    <property name="AcuseEnvio" type="char" column="`ACUSE_ENV`"/>
+    <property name="DescripcionDepartamento" type="String" column="`DEPARTAMENTO`"/>
+    <property name="DetalleResumen" type="String" column="`DETALLE_RES`"/>
+    <property name="Fecha" type="DateTime" column="`FECHA`"/>
+    <property name="FechaAlt" type="DateTime" column="`FECHA_ALT`"/>
+    <property name="FechaConfirmacion" type="DateTime" column="`FECHA_D`"/>
+    <property name="FechaEnvioAcuse" type="DateTime" column="`FECHA_ENV_ACUSE`"/>
+    <property name="FechaL" type="DateTime" column="`FECHA_L`" length="7" />
+    <property name="FechaReal" type="DateTime" column="`FECHA_REAL`"/>
+    <property name="Iniciales" type="String" column="`INICIALES`"/>
+    <property name="IRev" type="char" column="`IREV`" />
+    <property name="Medio" type="String" column="`MEDIO`" length="3" />
+    <property name="MedioAcuse" type="String" column="`MEDIO_ACUSE`"/>
+    <property name="Persona" type="String" column="`PERSONA`"/>
+    <property name="Receptor" type="String" column="`RECEPTOR`"/>
+    <property name="Referencia" type="String" column="`REFERENCIA`"/>
+    <property name="DescripcionResumen" type="String" column="`RESUMEN`"/>
+    <property name="Salida" type="Double" column="`SALIDA`"/>
+    <property name="Anexo" type="String" column="`XANEXO`"/>
+    <property name="AnexoFecha" type="DateTime" column="`XANEXO_FECHA`"/>
+    <property name="AnexoMedio" type="String" column="`XANEXO_MEDIO`"/>
+    <property name="AnexoTracking" type="String" column="`XANEXO_TRACKING`"/>
+    <property name="Tracking" type="String" column="`XTRACKING`"/>
+
+    <many-to-one name="Asociado" class="Asociado">
+      <column name="ASOCIADO"/>
+    </many-to-one>
+
+    <many-to-one name="Departamento" class="Departamento">
+      <column name="CODDPTO"/>
+    </many-to-one>
+
+    <many-to-one name="Resumen" class="Resumen">
+      <column name="CODRES"/>
+    </many-to-one>
+
+    <bag name="Justificaciones" table="FAC_ASO_JUST">
+      <key column="CCARTA"/>
+      <composite-element class="Justificacion">
+        <parent name="Carta"/>
+        <many-to-one name="Asociado" class="Asociado" column="CASOCIADO"/>
+        <property name="Fecha" column="FECHA" type="DateTime"/>
+        <many-to-one name="Concepto" class="Concepto">
+          <column name="CCONCEPTO"/>
+        </many-to-one>
+      </composite-element>
+    </bag>
+
+    <!--<bag name="Contactos">
+      <key>
+        <column name="CNUMERO" />
+        <column name="CASOCIADO" />
+      </key>
+      <one-to-many class="Contacto" not-found="ignore"/>
+    </bag>-->
+    <bag name="Contactos" inverse="true">
+      <key>
+        <!-- foreign key -->
+        <column name="CNUMERO"/>
+      </key>
+      <one-to-many class="Contacto" not-found="ignore"/>
+    </bag>
+
+    <bag name="Anexos" table="COR_ANEXO" lazy="false">
+      <key column="CODIGO"/>
+      <many-to-many column="COANEXO" class="Anexo" not-found="ignore"/>
+    </bag>
+
+    <bag name="AnexosConfirmacion" table="COR_ANEXO_CNF" lazy="false">
+      <key column="CODIGO"/>
+      <many-to-many column="COANEXO" class="Anexo" not-found="ignore"/>
+    </bag>
+
+  </class>
+</hibernate-mapping>
+
+
+
